@@ -1185,7 +1185,6 @@ section,
   }
 
   .hero .hero-content .hero-actions .btn {
-    margin-top: 40px;
     text-align: center;
     justify-content: center;
   }
@@ -2675,11 +2674,12 @@ section,
 # Call To Action Section
 --------------------------------------------------------------*/
 .call-to-action {
-  padding: 120px 0 100px;
+  padding: 30px 0 20px;
 }
 
 .call-to-action .hero-content {
   margin-bottom: 120px;
+
 }
 
 .call-to-action .hero-content .content-wrapper {
@@ -2850,6 +2850,7 @@ section,
 
 .call-to-action .contact-block {
   background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
+  margin-top: -80px;
   padding: 60px 40px;
   border-radius: 4px;
 }

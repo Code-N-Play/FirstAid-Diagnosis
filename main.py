@@ -14,12 +14,16 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 
 
 @app.route('/')
-def home():
+def index():
     return render_template('index.html')
 
 @app.route('/privacy')
-def privacyPage():
+def privacy():
     return render_template('privacy.html')
+
+@app.route('/symptom')
+def symptom():
+    return render_template('symptom.html')
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
