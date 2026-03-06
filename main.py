@@ -5,8 +5,7 @@ import os
 from dotenv import load_dotenv
 
 app = Flask(__name__)
-
-# Gemini API key
+ 
 load_dotenv()
 API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=API_KEY)
@@ -18,13 +17,15 @@ model = genai.GenerativeModel("gemini-2.5-flash")
 def home():
     return render_template('index.html')
 
+@app.route('/privacy')
+def privacyPage():
+    return render_template('privacy.html')
 
-# Image analyze route
 @app.route('/analyze', methods=['POST'])
 def analyze():
 
     if 'image' not in request.files:
-        return jsonify({"result": "No image uploaded"})
+        return jsonify({"error": "No image uploaded"})
 
     file = request.files['image']
 
@@ -32,27 +33,39 @@ def analyze():
         image = Image.open(file)
 
         prompt = """
-You are a medical first aid assistant.
+            Analyze the injury in the image and respond ONLY in JSON format:
 
-Look at the injury image and respond in this format:
+            {
+                "injury": "",
+                "risk_level": "",
+                "first_aid_steps": [],
+                "see_doctor_when": []
+            }
 
-Possible Injury:
-Risk Level (Low/Moderate/High):
-First Aid Steps:
-When should the user see a doctor?
+            Risk level must be EXACTLY one of these values:
+            HOME_CARE
+            MONITOR
+            DOCTOR_VISIT
+            EMERGENCY 
 
-Keep the answer simple so normal people can understand.
-"""
+            give short and undarstandable massege      
+            """
 
         response = model.generate_content([prompt, image])
 
-        return jsonify({
-            "result": response.text
-        })
+        # Extract text
+        result_text = response.text
+
+        # Remove markdown code blocks if Gemini adds them
+        result_text = result_text.replace("```json", "").replace("```", "").strip()
+
+        import json
+        result_json = json.loads(result_text)
+
+        return jsonify(result_json)
 
     except Exception as e:
-        return jsonify({"result": str(e)})
-
+        return jsonify({"error": str(e)})
 
 if __name__ == '__main__':
     app.run(debug=True)

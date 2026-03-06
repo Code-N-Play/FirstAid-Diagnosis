@@ -1185,6 +1185,7 @@ section,
   }
 
   .hero .hero-content .hero-actions .btn {
+    margin-top: 40px;
     text-align: center;
     justify-content: center;
   }

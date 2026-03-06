@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - Clinic Bootstrap Template</title>
+    <title>First-Aid Diagnosis</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
 
@@ -68,6 +68,25 @@
 
         }
 
+        .analyzebtn {
+            height: 50px;
+            width: 200px;
+            border-radius: 15px;
+            background-color: rgb(63, 198, 4);
+            border-color: green;
+            color: white;
+            font-weight: 700;
+            margin-left: 40%;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
         #previewLabel {
             padding: 20px;
         }
@@ -85,21 +104,7 @@
 
     <header id="header" class="header fixed-top">
 
-        <div class="topbar d-flex align-items-center dark-background">
-            <div class="container d-flex justify-content-center justify-content-md-between">
-                <div class="contact-info d-flex align-items-center">
-                    <i class="bi bi-envelope d-flex align-items-center"><a
-                            href="mailto:contact@example.com">contact@example.com</a></i>
-                    <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
-                </div>
-                <div class="social-links d-none d-md-flex align-items-center">
-                    <a href="#!" class="twitter"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#!" class="facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="#!" class="instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="#!" class="linkedin"><i class="bi bi-linkedin"></i></a>
-                </div>
-            </div>
-        </div><!-- End Top Bar -->
+
 
         <div class="branding d-flex align-items-cente">
 
@@ -107,50 +112,16 @@
                 <a href="index.html" class="logo d-flex align-items-center">
                     <!-- Uncomment the line below if you also wish to use an image logo -->
                     <!-- <img src="static/assets/img/logo.webp" alt=""> -->
-                    <h1 class="sitename">Clinic</h1>
+                    <h1 class="sitename">FADc</h1>
                 </a>
 
                 <nav id="navmenu" class="navmenu">
                     <ul>
                         <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="departments.html">Departments</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="doctors.html">Doctors</a></li>
-                        <li class="dropdown"><a href="#"><span>More Pages</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="department-details.html">Department Details</a></li>
-                                <li><a href="service-details.html">Service Details</a></li>
-                                <li><a href="appointment.html">Appointment</a></li>
-                                <li><a href="testimonials.html">Testimonials</a></li>
-                                <li><a href="faq.html">Frequently Asked Questions</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="terms.html">Terms</a></li>
-                                <li><a href="privacy.html">Privacy</a></li>
-                                <li><a href="404.html">404</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown"><a href="#"><span>Dropdown</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="#">Dropdown 1</a></li>
-                                <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                                            class="bi bi-chevron-down toggle-dropdown"></i></a>
-                                    <ul>
-                                        <li><a href="#">Deep Dropdown 1</a></li>
-                                        <li><a href="#">Deep Dropdown 2</a></li>
-                                        <li><a href="#">Deep Dropdown 3</a></li>
-                                        <li><a href="#">Deep Dropdown 4</a></li>
-                                        <li><a href="#">Deep Dropdown 5</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Dropdown 2</a></li>
-                                <li><a href="#">Dropdown 3</a></li>
-                                <li><a href="#">Dropdown 4</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="">Diagnosis by Image</a></li>
+                        <li><a href="departments.html">Diagnosis by Syptoms</a></li>
+                        <li><a href="services.html">Care with Privacy</a></li>
+                        <li><a href="contact.html">About</a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
@@ -171,6 +142,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="hero-content">
+                            <br>
                             <div class="trust-badges mb-4" data-aos="fade-right" data-aos-delay="200">
                                 <div class="badge-item">
                                     <i class="bi bi-shield-check"></i>
@@ -187,7 +159,7 @@
                             </div>
 
                             <h1 data-aos="fade-right" data-aos-delay="300">
-                                Excellence in <span class="highlight">Healthcare</span> With Compassionate Care
+                                Excellence in <span class="highlight">Healthcare</span> With Privacy
                             </h1>
 
                             <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
@@ -228,7 +200,7 @@
                                 </div>
                                 <div class="emergency-info">
                                     <small>Emergency Hotline</small>
-                                    <strong>+1 (555) 911-2468</strong>
+                                    <strong>108</strong>
                                 </div>
                             </div>
                         </div>
@@ -295,8 +267,8 @@
                 <img id="" width="250px" height="200px" style="display:none; border:1px solid #ccc;">
 
             </div>
-            <button onclick="analyzeImage()">Analyze Injury</button>
-            <p id="result"></p>
+            <button class="analyzebtn" onclick="analyzeImage()">Analyze Injury</button>
+            <div id="result"></div>
 
             <br><br>
             <h2>Effected Body Area(Optional)</h2>
@@ -452,59 +424,9 @@
                         </div>
                     </div><!-- End Specialty Card -->
 
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="department-highlight">
-                            <div class="highlight-icon">
-                                <i class="bi bi-shield-plus"></i>
-                            </div>
-                            <h4>Orthopedic Surgery</h4>
-                            <p>Comprehensive musculoskeletal care utilizing advanced arthroscopic techniques and joint
-                                replacement
-                                procedures.</p>
-                            <ul class="highlight-list">
-                                <li>Sports Medicine</li>
-                                <li>Joint Replacement</li>
-                                <li>Spine Surgery</li>
-                            </ul>
-                            <a href="department-details.html" class="highlight-cta">Learn More</a>
-                        </div>
-                    </div><!-- End Department Highlight -->
 
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="department-highlight">
-                            <div class="highlight-icon">
-                                <i class="bi bi-people"></i>
-                            </div>
-                            <h4>Pediatric Care</h4>
-                            <p>Child-centered healthcare services from newborn to adolescence with family-focused
-                                treatment
-                                approaches.</p>
-                            <ul class="highlight-list">
-                                <li>Neonatal Intensive Care</li>
-                                <li>Developmental Pediatrics</li>
-                                <li>Pediatric Surgery</li>
-                            </ul>
-                            <a href="department-details.html" class="highlight-cta">Learn More</a>
-                        </div>
-                    </div><!-- End Department Highlight -->
 
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="department-highlight">
-                            <div class="highlight-icon">
-                                <i class="bi bi-activity"></i>
-                            </div>
-                            <h4>Cancer Treatment</h4>
-                            <p>Multidisciplinary oncology program offering personalized cancer care with latest
-                                therapeutic
-                                innovations.</p>
-                            <ul class="highlight-list">
-                                <li>Precision Medicine</li>
-                                <li>Immunotherapy</li>
-                                <li>Radiation Oncology</li>
-                            </ul>
-                            <a href="department-details.html" class="highlight-cta">Learn More</a>
-                        </div>
-                    </div><!-- End Department Highlight -->
+
 
                 </div>
 
@@ -521,7 +443,7 @@
                         <div class="col-lg-4 text-lg-end">
                             <a href="tel:+15551234567" class="emergency-btn">
                                 <i class="bi bi-telephone-fill"></i>
-                                Call Emergency: (555) 123-4567
+                                Call Emergency: 108
                             </a>
                         </div>
                     </div>
@@ -674,301 +596,11 @@
 
         </section><!-- /Featured Services Section -->
 
-        <!-- Find A Doctor Section -->
-        <section id="find-a-doctor" class="find-a-doctor section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-                <h2>Find A Doctor</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-            </div><!-- End Section Title -->
-
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="row justify-content-center mb-5" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-lg-8 text-center">
-                        <div class="search-section">
-                            <h3 class="search-title">Find Your Perfect Healthcare Provider</h3>
-                            <p class="search-subtitle">Search through our comprehensive directory of experienced medical
-                                professionals
-                            </p>
-                            <form class="search-form" action="#!" method="#">
-                                <div class="search-input-group">
-                                    <div class="input-wrapper">
-                                        <i class="bi bi-person"></i>
-                                        <input type="text" class="form-control" name="doctor_name"
-                                            placeholder="Enter doctor name">
-                                    </div>
-                                    <div class="select-wrapper">
-                                        <i class="bi bi-heart-pulse"></i>
-                                        <select class="form-select" name="specialty">
-                                            <option value="">All Specialties</option>
-                                            <option value="cardiology">Cardiology</option>
-                                            <option value="neurology">Neurology</option>
-                                            <option value="orthopedics">Orthopedics</option>
-                                            <option value="pediatrics">Pediatrics</option>
-                                            <option value="dermatology">Dermatology</option>
-                                            <option value="oncology">Oncology</option>
-                                        </select>
-                                    </div>
-                                    <button type="submit" class="search-btn">
-                                        <i class="bi bi-search"></i>
-                                        Find Doctors
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="doctors-grid" data-aos="fade-up" data-aos-delay="300">
-                    <div class="doctor-profile" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="profile-header">
-                            <div class="doctor-avatar">
-                                <img src="static/assets/img/health/staff-2.webp" alt="Dr. Amanda Foster"
-                                    class="img-fluid">
-                                <div class="status-indicator available"></div>
-                            </div>
-                            <div class="doctor-details">
-                                <h4>Dr. Amanda Foster</h4>
-                                <span class="specialty-tag">Cardiology Specialist</span>
-                                <div class="experience-info">
-                                    <i class="bi bi-award"></i>
-                                    <span>14 years experience</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rating-section">
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <span class="rating-score">4.9</span>
-                            <span class="review-count">(127 reviews)</span>
-                        </div>
-                        <div class="action-buttons">
-                            <a href="#!" class="btn-secondary">View Details</a>
-                            <a href="#!" class="btn-primary">Book Now</a>
-                        </div>
-                    </div><!-- End Doctor Profile -->
-
-                    <div class="doctor-profile" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="profile-header">
-                            <div class="doctor-avatar">
-                                <img src="static/assets/img/health/staff-6.webp" alt="Dr. Marcus Johnson"
-                                    class="img-fluid">
-                                <div class="status-indicator busy"></div>
-                            </div>
-                            <div class="doctor-details">
-                                <h4>Dr. Marcus Johnson</h4>
-                                <span class="specialty-tag">Neurology Expert</span>
-                                <div class="experience-info">
-                                    <i class="bi bi-award"></i>
-                                    <span>16 years experience</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rating-section">
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-half"></i>
-                            </div>
-                            <span class="rating-score">4.8</span>
-                            <span class="review-count">(89 reviews)</span>
-                        </div>
-                        <div class="action-buttons">
-                            <a href="#!" class="btn-secondary">View Details</a>
-                            <a href="#!" class="btn-primary">Schedule</a>
-                        </div>
-                    </div><!-- End Doctor Profile -->
-
-                    <div class="doctor-profile" data-aos="zoom-in" data-aos-delay="300">
-                        <div class="profile-header">
-                            <div class="doctor-avatar">
-                                <img src="static/assets/img/health/staff-4.webp" alt="Dr. Rachel Williams"
-                                    class="img-fluid">
-                                <div class="status-indicator available"></div>
-                            </div>
-                            <div class="doctor-details">
-                                <h4>Dr. Rachel Williams</h4>
-                                <span class="specialty-tag">Pediatrics Care</span>
-                                <div class="experience-info">
-                                    <i class="bi bi-award"></i>
-                                    <span>11 years experience</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rating-section">
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <span class="rating-score">5.0</span>
-                            <span class="review-count">(203 reviews)</span>
-                        </div>
-                        <div class="action-buttons">
-                            <a href="#!" class="btn-secondary">View Details</a>
-                            <a href="#!" class="btn-primary">Book Now</a>
-                        </div>
-                    </div><!-- End Doctor Profile -->
-
-                    <div class="doctor-profile" data-aos="zoom-in" data-aos-delay="400">
-                        <div class="profile-header">
-                            <div class="doctor-avatar">
-                                <img src="static/assets/img/health/staff-8.webp" alt="Dr. David Chen" class="img-fluid">
-                                <div class="status-indicator offline"></div>
-                            </div>
-                            <div class="doctor-details">
-                                <h4>Dr. David Chen</h4>
-                                <span class="specialty-tag">Orthopedic Surgery</span>
-                                <div class="experience-info">
-                                    <i class="bi bi-award"></i>
-                                    <span>22 years experience</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rating-section">
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-half"></i>
-                            </div>
-                            <span class="rating-score">4.7</span>
-                            <span class="review-count">(156 reviews)</span>
-                        </div>
-                        <div class="action-buttons">
-                            <a href="#!" class="btn-secondary">View Details</a>
-                            <a href="#!" class="btn-primary">Schedule</a>
-                        </div>
-                    </div><!-- End Doctor Profile -->
-
-                    <div class="doctor-profile" data-aos="zoom-in" data-aos-delay="500">
-                        <div class="profile-header">
-                            <div class="doctor-avatar">
-                                <img src="static/assets/img/health/staff-11.webp" alt="Dr. Victoria Torres"
-                                    class="img-fluid">
-                                <div class="status-indicator available"></div>
-                            </div>
-                            <div class="doctor-details">
-                                <h4>Dr. Victoria Torres</h4>
-                                <span class="specialty-tag">Dermatology Care</span>
-                                <div class="experience-info">
-                                    <i class="bi bi-award"></i>
-                                    <span>9 years experience</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rating-section">
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                            </div>
-                            <span class="rating-score">4.5</span>
-                            <span class="review-count">(74 reviews)</span>
-                        </div>
-                        <div class="action-buttons">
-                            <a href="#!" class="btn-secondary">View Details</a>
-                            <a href="#!" class="btn-primary">Book Now</a>
-                        </div>
-                    </div><!-- End Doctor Profile -->
-
-                    <div class="doctor-profile" data-aos="zoom-in" data-aos-delay="600">
-                        <div class="profile-header">
-                            <div class="doctor-avatar">
-                                <img src="static/assets/img/health/staff-14.webp" alt="Dr. Benjamin Lee"
-                                    class="img-fluid">
-                                <div class="status-indicator available"></div>
-                            </div>
-                            <div class="doctor-details">
-                                <h4>Dr. Benjamin Lee</h4>
-                                <span class="specialty-tag">Oncology Treatment</span>
-                                <div class="experience-info">
-                                    <i class="bi bi-award"></i>
-                                    <span>19 years experience</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="rating-section">
-                            <div class="stars">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                            </div>
-                            <span class="rating-score">4.9</span>
-                            <span class="review-count">(194 reviews)</span>
-                        </div>
-                        <div class="action-buttons">
-                            <a href="#!" class="btn-secondary">View Details</a>
-                            <a href="#!" class="btn-primary">Schedule</a>
-                        </div>
-                    </div><!-- End Doctor Profile -->
-
-                </div>
-
-                <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="700">
-                    <a href="doctors.html" class="btn-view-all">
-                        View All Doctors
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-
-            </div>
-
-        </section><!-- /Find A Doctor Section -->
-
         <!-- Call To Action Section -->
         <section id="call-to-action" class="call-to-action section light-background">
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-                <div class="hero-content">
-                    <div class="row align-items-center">
-
-                        <div class="col-lg-6">
-                            <div class="content-wrapper" data-aos="fade-up" data-aos-delay="200">
-                                <h1>Excellence in Medical Care, Every Day</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-                                    incididunt ut labore
-                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-
-                                <div class="cta-wrapper">
-                                    <a href="appointment.html" class="primary-cta">
-                                        <span>Schedule Consultation</span>
-                                        <i class="bi bi-arrow-right"></i>
-                                    </a>
-                                    <a href="services.html" class="secondary-cta">
-                                        <span>Explore Services</span>
-                                        <i class="bi bi-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="image-container" data-aos="fade-left" data-aos-delay="300">
-                                <img src="static/assets/img/health/facilities-9.webp" alt="Medical Excellence"
-                                    class="img-fluid">
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
 
                 <div class="features-section">
 
@@ -1055,7 +687,7 @@
                     <div class="col-lg-5">
                         <div class="brand-section">
                             <a href="index.html" class="logo d-flex align-items-center mb-4">
-                                <span class="sitename">Clinic</span>
+                                <span class="sitename">FADc</span>
                             </a>
                             <p class="brand-description">Crafting exceptional digital experiences through thoughtful
                                 design and
@@ -1064,15 +696,15 @@
                             <div class="contact-info mt-5">
                                 <div class="contact-item">
                                     <i class="bi bi-geo-alt"></i>
-                                    <span>123 Creative Boulevard, Design District, NY 10012</span>
+                                    <span>Greater Noida, Delhi NCR, INDIA 10012</span>
                                 </div>
                                 <div class="contact-item">
                                     <i class="bi bi-telephone"></i>
-                                    <span>+1 (555) 987-6543</span>
+                                    <span>+91 9876543210</span>
                                 </div>
                                 <div class="contact-item">
                                     <i class="bi bi-envelope"></i>
-                                    <span>hello@designstudio.com</span>
+                                    <span>hello@first-aid-diagnosis.com</span>
                                 </div>
                             </div>
                         </div>
@@ -1080,17 +712,17 @@
 
                     <div class="col-lg-7">
                         <div class="footer-nav-wrapper">
-                            <div class="row">
+                            <div class="row" style="margin-top:30px ;">
 
-                                <div class="col-6 col-lg-3">
+                                <div class="col-6 col-lg-6">
                                     <div class="nav-column">
-                                        <h6>Studio</h6>
+                                        <h6>Pages</h6>
                                         <nav class="footer-nav">
-                                            <a href="#!">Our Story</a>
-                                            <a href="#!">Design Process</a>
-                                            <a href="#!">Portfolio</a>
-                                            <a href="#!">Case Studies</a>
-                                            <a href="#!">Awards</a>
+                                            <a href="#!">Home</a>
+                                            <a href="#!">Diagnosis by Image</a>
+                                            <a href="#!">Diagnosis by Syptoms</a>
+                                            <a href="#!">Care with Privacy</a>
+                                            <a href="#!">About</a>
                                         </nav>
                                     </div>
                                 </div>
@@ -1099,42 +731,18 @@
                                     <div class="nav-column">
                                         <h6>Services</h6>
                                         <nav class="footer-nav">
-                                            <a href="#!">Brand Identity</a>
-                                            <a href="#!">Web Design</a>
-                                            <a href="#!">Mobile Apps</a>
-                                            <a href="#!">Digital Strategy</a>
-                                            <a href="#!">Consultation</a>
+                                            <a href="privacy.html">Privacy Policy</a>
+                                            <a href="#!">Terms of Services</a>
+                                            <a href="#!">Cookie Policy</a>
+                                            <a href="#!">GitHub</a>
+                                            <a href="#!">YouTube</a>
                                         </nav>
                                     </div>
                                 </div>
-
-                                <div class="col-6 col-lg-3">
-                                    <div class="nav-column">
-                                        <h6>Resources</h6>
-                                        <nav class="footer-nav">
-                                            <a href="#!">Design Blog</a>
-                                            <a href="#!">Style Guide</a>
-                                            <a href="#!">Free static/assets</a>
-                                            <a href="#!">Tutorials</a>
-                                            <a href="#!">Inspiration</a>
-                                        </nav>
-                                    </div>
-                                </div>
-
-                                <div class="col-6 col-lg-3">
-                                    <div class="nav-column">
-                                        <h6>Connect</h6>
-                                        <nav class="footer-nav">
-                                            <a href="#!">Start Project</a>
-                                            <a href="#!">Schedule Call</a>
-                                            <a href="#!">Join Newsletter</a>
-                                            <a href="#!">Follow Updates</a>
-                                            <a href="#!">Partnership</a>
-                                        </nav>
-                                    </div>
-                                </div>
-
                             </div>
+
+
+
                         </div>
                     </div>
 
@@ -1143,37 +751,7 @@
 
         </div>
 
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="bottom-content" data-aos="fade-up" data-aos-delay="300">
-                    <div class="row align-items-center">
 
-                        <div class="col-lg-6">
-                            <div class="copyright">
-                                <p>© <span class="sitename">Clinic</span>. All rights reserved.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="legal-links">
-                                <a href="#!">Privacy Policy</a>
-                                <a href="#!">Terms of Service</a>
-                                <a href="#!">Cookie Policy</a>
-                                <div class="credits">
-                                    <!-- All the links in the footer should remain intact. -->
-                                    <!-- You can delete the links only if you've purchased the pro version. -->
-                                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                                    <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>. Distributed by
-                                    <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
 
     </footer>
 
@@ -1215,24 +793,163 @@
             }
 
         }
+        // async function analyzeImage() {
+
+        //     const fileInput = document.querySelector("input[type=file]");
+        //     const file = fileInput.files[0];
+
+        //     const formData = new FormData();
+        //     formData.append("image", file);
+
+        //     const resultArea = document.getElementById("result");
+
+        //     resultArea.innerHTML = `
+        //                 <div class="text-center">
+        //         <div class="spinner-border" role="status">
+        //             <span class="visually-hidden">Loading...</span>
+        //         </div>
+        //     </div>`;
+
+        //     try {
+        //         const response = await fetch("/analyze", {
+        //             method: "POST",
+        //             body: formData
+        //         });
+
+        //         if (!response.ok) {
+        //             throw new Error("Server error: " + response.status);
+        //         }
+
+        //         const data = await response.json();
+        //         resultArea.innerText = data.result;
+
+        //     } catch (error) {
+        //         resultArea.innerHTML = `
+        //         <div class="alert alert-danger" role="alert">
+        //             Error : ${error.message}
+        //         </div>`;
+        //     }
+
+        // }
         async function analyzeImage() {
 
-            const fileInput = document.querySelector("input[type=file]");
-            const file = fileInput.files[0];
+    const fileInput = document.querySelector("input[type=file]");
+    const file = fileInput.files[0];
 
-            const formData = new FormData();
-            formData.append("image", file);
+    if (!file) {
+        alert("Please upload an image first.");
+        return;
+    }
 
-            const response = await fetch("/analyze", {
-                method: "POST",
-                body: formData
-            });
+    const formData = new FormData();
+    formData.append("image", file);
 
-            const data = await response.json();
+    const resultArea = document.getElementById("result");
 
-            document.getElementById("result").innerText = data.result;
+    // Loader
+    resultArea.innerHTML = `
+        <div class="text-center p-4">
+            <div class="spinner-border text-primary"></div>
+            <p class="mt-2">Analyzing injury...</p>
+        </div>
+    `;
 
+    try {
+
+        const response = await fetch("/analyze", {
+            method: "POST",
+            body: formData
+        });
+
+        if (!response.ok) {
+            throw new Error("Server error: " + response.status);
         }
+
+        const data = await response.json();
+
+        console.log(data); // debug
+
+        // Risk mapping
+        let riskSymbol = "⚪";
+        let riskText = "Unknown";
+
+        if (data.risk_level === "HOME_CARE") {
+            riskSymbol = "🟢";
+            riskText = "Home Care";
+        }
+        else if (data.risk_level === "MONITOR") {
+            riskSymbol = "🟡";
+            riskText = "Monitor";
+        }
+        else if (data.risk_level === "DOCTOR_VISIT") {
+            riskSymbol = "🟠";
+            riskText = "Doctor Visit";
+        }
+        else if (data.risk_level === "EMERGENCY") {
+            riskSymbol = "🔴";
+            riskText = "Emergency";
+        }
+
+        const firstAid = data.first_aid_steps || [];
+        const doctor = data.see_doctor_when || [];
+
+        resultArea.innerHTML = `
+        <div class="row g-3 mt-2">
+
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5>🩹 Possible Injury</h5>
+                        <p>${data.injury || "Not detected"}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5>⚠️ Risk Level</h5>
+                        <p style="font-weight:bold;font-size:18px;">
+                            ${riskSymbol} ${riskText}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5>First Aid Steps</h5>
+                        <ul>
+                            ${firstAid.map(step => `<li>${step}</li>`).join("") || "<li>No steps provided</li>"}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card shadow-sm border-danger">
+                    <div class="card-body">
+                        <h5 class="text-danger">When to See a Doctor</h5>
+                        <ul>
+                            ${doctor.map(step => `<li>${step}</li>`).join("") || "<li>No warning provided</li>"}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        `;
+
+    } catch (error) {
+
+        resultArea.innerHTML = `
+        <div class="alert alert-danger">
+            Error: ${error.message}
+        </div>
+        `;
+    }
+}
     </script>
 
 </body>
