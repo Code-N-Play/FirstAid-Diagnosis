@@ -28,6 +28,10 @@ def index():
 def privacy():
     return render_template('privacy.html')
 
+@app.route('/care')
+def care():
+    return render_template('carewithPrivacy.html')
+
 
 @app.route('/symptom')
 def symptom():
