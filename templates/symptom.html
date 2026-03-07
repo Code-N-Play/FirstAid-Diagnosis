@@ -38,64 +38,12 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
     <style>
-        .inputfiled {
-            display: none;
-
-        }
-
-        .dropbox {
-            width: 600px;
-            height: 300px;
-            border: 2px dashed;
-            border-radius: 25px;
-            border-color: gray;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-        }
+        
 
         .inputbox {
             justify-content: center;
         }
-
-        .inputboxprivew {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-
-        .analyzebtn {
-            height: 50px;
-            width: 200px;
-            border-radius: 15px;
-            background-color: rgb(63, 198, 4);
-            border-color: green;
-            color: white;
-            font-weight: 700;
-            margin-left: 40%;
-        }
-
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        #previewLabel {
-            padding: 20px;
-        }
-
-        #previewLabel .preview-image {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            max-height: 250px;
-        }
-
+    
         .mainhead {
             font-weight: 700;
             text-align: center;
@@ -119,13 +67,14 @@
             justify-content: center;
             gap: 20px;
         }
-
-        .textboxss {
-            height: 100px;
-            width: 300px;
-
+        .one{
+            height: 50px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
+      
         .analyzebtn {
             height: 50px;
             width: 200px;
@@ -135,6 +84,50 @@
             color: white;
             font-weight: 700;
             margin-left: 40%;
+        }
+        .headbox{
+            height: auto;
+            width: 100%;
+            border-radius: 10px;
+            border:1px solid green;
+        }
+        .heading{
+            margin-top: 10px;
+            text-align: center; 
+            font-weight: 700;
+        }
+        .perabox{
+            height: auto;
+            width: 100%;
+            border-radius: 10px;
+            border:1px solid orange;
+        }
+        .paragraph{
+            margin-top: 10px;
+            text-align: center;
+            font-weight: 400;
+        }
+        .discription{
+            height: auto;
+            width: 100%;
+            border-radius: 10px;
+            border:1px solid red;
+        }
+        .ull{
+            margin-top: 10px;
+        }
+        .analyzebtn {
+            height: 50px;
+            width: 200px;
+            border-radius: 15px;
+            background-color: rgb(63, 198, 4);
+            border-color: green;
+            color: white;
+            font-weight: 700;
+            margin-left: 40%;
+        }
+        .head1{
+            font-weight: 700;
         }
     </style>
 </head>
@@ -401,131 +394,131 @@
 
             <form method="POST" action="/symptom">
 
-                <h3>Injured Place</h3>
+                <h3 class="head1">Injured Place</h3>
                 <br>
 
-                <div class="inputbox">
+                <div class="inputbox d-flex flex-wrap">
 
                     <input type="checkbox" class="btn-check" name="body_part" id="head" value="Head">
-                    <label class="btn btn-outline-primary" for="head">Head</label>
+                    <label class="one btn btn-outline-primary" for="head">Head</label>
 
                     <input type="checkbox" class="btn-check" name="body_part" id="eye" value="Eye">
-                    <label class="btn btn-outline-primary" for="eye">Eye</label>
+                    <label class="one btn btn-outline-primary" for="eye">Eye</label>
 
                     <input type="checkbox" class="btn-check" name="body_part" id="skin" value="Skin">
-                    <label class="btn btn-outline-primary" for="skin">Skin</label>
+                    <label class="one btn btn-outline-primary" for="skin">Skin</label>
 
                     <input type="checkbox" class="btn-check" name="body_part" id="chest" value="Chest">
-                    <label class="btn btn-outline-primary" for="chest">Chest</label>
+                    <label class="one btn btn-outline-primary" for="chest">Chest</label>
 
                     <input type="checkbox" class="btn-check" name="body_part" id="stomach" value="Stomach">
-                    <label class="btn btn-outline-primary" for="stomach">Stomach</label>
+                    <label class="one btn btn-outline-primary" for="stomach">Stomach</label>
 
                     <input type="checkbox" class="btn-check" name="body_part" id="hand" value="Hand">
-                    <label class="btn btn-outline-primary" for="hand">Hand</label>
+                    <label class="one btn btn-outline-primary" for="hand">Hand</label>
 
                     <input type="checkbox" class="btn-check" name="body_part" id="leg" value="Leg">
-                    <label class="btn btn-outline-primary" for="leg">Leg</label>
+                    <label class="one btn btn-outline-primary" for="leg">Leg</label>
 
                 </div>
 
                 <br><br>
 
-                <h3>Symptoms</h3>
+                <h3 class="head1" >Symptoms</h3>
                 <br>
 
-                <div class="inputbox">
+                <div class="inputbox d-flex flex-wrap">
 
                     <input type="checkbox" class="btn-check" name="symptom" id="pain" value="Pain">
-                    <label class="btn btn-outline-primary" for="pain">Pain</label>
+                    <label class="one btn btn-outline-primary" for="pain">Pain</label>
 
                     <input type="checkbox" class="btn-check" name="symptom" id="swelling" value="Swelling">
-                    <label class="btn btn-outline-primary" for="swelling">Swelling</label>
+                    <label class="one btn btn-outline-primary" for="swelling">Swelling</label>
 
                     <input type="checkbox" class="btn-check" name="symptom" id="redness" value="Redness">
-                    <label class="btn btn-outline-primary" for="redness">Redness</label>
+                    <label class="one btn btn-outline-primary" for="redness">Redness</label>
 
                     <input type="checkbox" class="btn-check" name="symptom" id="burning" value="Burning sensation">
-                    <label class="btn btn-outline-primary" for="burning">Burning sensation</label>
+                    <label class="one btn btn-outline-primary" for="burning">Burning sensation</label>
 
                     <input type="checkbox" class="btn-check" name="symptom" id="itching" value="Itching">
-                    <label class="btn btn-outline-primary" for="itching">Itching</label>
+                    <label class="one btn btn-outline-primary" for="itching">Itching</label>
 
                     <input type="checkbox" class="btn-check" name="symptom" id="bleeding" value="Bleeding">
-                    <label class="btn btn-outline-primary" for="bleeding">Bleeding</label>
+                    <label class="one btn btn-outline-primary" for="bleeding">Bleeding</label>
 
                     <input type="checkbox" class="btn-check" name="symptom" id="fever" value="Fever">
-                    <label class="btn btn-outline-primary" for="fever">Fever</label>
+                    <label class="one btn btn-outline-primary" for="fever">Fever</label>
 
                     <input type="checkbox" class="btn-check" name="symptom" id="nausea" value="Nausea">
-                    <label class="btn btn-outline-primary" for="nausea">Nausea</label>
+                    <label class="one btn btn-outline-primary" for="nausea">Nausea</label>
 
                     <input type="checkbox" class="btn-check" name="symptom" id="dizziness" value="Dizziness">
-                    <label class="btn btn-outline-primary" for="dizziness">Dizziness</label>
+                    <label class="one btn btn-outline-primary" for="dizziness">Dizziness</label>
 
                     <input type="checkbox" class="btn-check" name="symptom" id="rash" value="Rash">
-                    <label class="btn btn-outline-primary" for="rash">Rash</label>
+                    <label class="one btn btn-outline-primary" for="rash">Rash</label>
 
                 </div>
 
                 <br><br>
 
-                <h3>Injury Duration</h3>
+                <h3 class="head1" >Injury Duration</h3>
                 <br>
 
-                <div class="inputbox">
+                <div class="inputbox d-flex flex-wrap">
 
                     <input type="checkbox" class="btn-check" name="duration" id="Just Now" value="Just Now">
-                    <label class="btn btn-outline-primary" for="Just Now">Just Now</label>
+                    <label class="one btn btn-outline-primary" for="Just Now">Just Now</label>
 
                     <input type="checkbox" class="btn-check" name="duration" id="5 Min" value="5 Min">
-                    <label class="btn btn-outline-primary" for="5 Min">5 Min</label>
+                    <label class="one btn btn-outline-primary" for="5 Min">5 Min</label>
 
                     <input type="checkbox" class="btn-check" name="duration" id="30 Min" value="30 Min">
-                    <label class="btn btn-outline-primary" for="30 Min">30 Min</label>
+                    <label class="one btn btn-outline-primary" for="30 Min">30 Min</label>
 
                     <input type="checkbox" class="btn-check" name="duration" id="1 Hour" value="1 Hour">
-                    <label class="btn btn-outline-primary" for="1 Hour">1 Hour</label>
+                    <label class="one btn btn-outline-primary" for="1 Hour">1 Hour</label>
 
                     <input type="checkbox" class="btn-check" name="duration" id="1 Day" value="1 Day">
-                    <label class="btn btn-outline-primary" for="1 Day">1 Day</label>
+                    <label class="one btn btn-outline-primary" for="1 Day">1 Day</label>
 
                     <input type="checkbox" class="btn-check" name="duration" id="More then 2 Days"
                         value="More then 2 Days">
-                    <label class="btn btn-outline-primary" for="More then 2 Days">More then 2 Days</label>
+                    <label class="one btn btn-outline-primary" for="More then 2 Days">More then 2 Days</label>
 
                 </div>
 
                 <br><br>
 
-                <h3>Age Group</h3>
+                <h3 class="head1">Age Group</h3>
                 <br>
 
-                <div class="inputbox">
+                <div class="inputbox d-flex flex-wrap">
 
                     <input type="checkbox" class="btn-check" name="age" id="Below 5 Years" value="Below 5 Years">
-                    <label class="btn btn-outline-primary" for="Below 5 Years">Below 5 Years</label>
+                    <label class="one btn btn-outline-primary" for="Below 5 Years">Below 5 Years</label>
 
                     <input type="checkbox" class="btn-check" name="age" id="5-10 Years" value="5-10 Years">
-                    <label class="btn btn-outline-primary" for="5-10 Years">5-10 Years</label>
+                    <label class="one btn btn-outline-primary" for="5-10 Years">5-10 Years</label>
 
                     <input type="checkbox" class="btn-check" name="age" id="10-17 Years" value="10-17 Years">
-                    <label class="btn btn-outline-primary" for="10-17 Years">10-17 Years</label>
+                    <label class="one btn btn-outline-primary" for="10-17 Years">10-17 Years</label>
 
                     <input type="checkbox" class="btn-check" name="age" id="18-30 Years" value="18-30 Years">
-                    <label class="btn btn-outline-primary" for="18-30 Years">18-30 Years</label>
+                    <label class="one btn btn-outline-primary" for="18-30 Years">18-30 Years</label>
 
                     <input type="checkbox" class="btn-check" name="age" id="31-50 Years" value="31-50 Years">
-                    <label class="btn btn-outline-primary" for="31-50 Years">31-50 Years</label>
+                    <label class="one btn btn-outline-primary" for="31-50 Years">31-50 Years</label>
 
                     <input type="checkbox" class="btn-check" name="age" id="More then 50" value="More then 50">
-                    <label class="btn btn-outline-primary" for="More then 50">More then 50</label>
+                    <label class="one btn btn-outline-primary" for="More then 50">More then 50</label>
 
                 </div>
 
                 <br><br>
 
-                <button type="button" onclick="analyzeSymptoms()">Analyze</button>
+                <button class="analyzebtn" type="button" onclick="analyzeSymptoms()">Analyze</button>
             </form>
         </div>
 
@@ -939,13 +932,19 @@
                         document.getElementById("loader").style.display = "none"
 
                         document.getElementById("result").innerHTML = `
-<h1>${data.injury}</h1>
-<p><b>Risk Level:</b> ${data.risk_level}</p>
-
-<ul>
-${data.first_aid_steps.map(step => `<li>${step}</li>`).join("")}
-</ul>
-`
+                        <div class="container">
+                            <br><br>
+                            <div class="headbox"><h2 class="heading">${data.injury}</h2></div>
+                            <br>
+                            <div class="perabox"><p class="paragraph"><b>Risk Level:</b> ${data.risk_level}</p></div>
+                            <br><br>
+                            <div class="discription">
+                            <ul class="ull">
+                                ${data.first_aid_steps.map(step => `<li>${step}</li>`).join("")}
+                            </ul>
+                            </div>
+                        </div>
+                        `
 
                     })
                     .catch(err => {
