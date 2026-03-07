@@ -106,9 +106,11 @@ def analyze_symptom():
 
         symptoms = data.get("symptoms", [])
         body_parts = data.get("body_parts", [])
+        duration = data.get("duration", [])
 
         print("Symptoms:", symptoms)
         print("Body Parts:", body_parts)
+        print("Duration:", duration)
 
         if not symptoms and not body_parts:
             return jsonify({
@@ -119,30 +121,36 @@ def analyze_symptom():
             })
 
         prompt = f"""
-User injured body part: {body_parts}
 
-User symptoms: {symptoms}
+        You are a medical first aid assistant.
 
-Identify the possible injury and give first aid advice.
+            User injured body part: {body_parts}
 
-Respond ONLY in JSON format:
+            User symptoms: {symptoms}
 
-{{
-"injury": "",
-"risk_level": "",
-"first_aid_steps": [],
-"see_doctor_when": []
-}}
+            injury duration: {duration}
 
-Risk level must be EXACTLY one of:
+            Identify the possible injury and give first aid advice.
 
-HOME_CARE
-MONITOR
-DOCTOR_VISIT
-EMERGENCY
+            Respond ONLY in JSON format:
 
-Keep advice short and easy to understand.
-"""
+            
+            {{
+                "injury": "",
+                "risk_level": "",
+                "first_aid_steps": [],
+                "see_doctor_when": []
+            }}
+
+            Risk level must be EXACTLY one of:
+
+            HOME_CARE
+            MONITOR
+            DOCTOR_VISIT
+            EMERGENCY
+
+            Keep advice short and easy to understand.
+            """
 
         response = model.generate_content(prompt)
 

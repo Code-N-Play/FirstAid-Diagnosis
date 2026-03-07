@@ -470,9 +470,38 @@
 
                 <br><br>
 
+                <h3>Injury Duration</h3>
+                <br>
+
+                <div class="inputbox">
+
+                    <input type="checkbox" class="btn-check" name="duration" id="Just Now" value="Just Now">
+                    <label class="btn btn-outline-primary" for="Just Now">Just Now</label>
+
+                    <input type="checkbox" class="btn-check" name="duration" id="5 Min" value="5 Min">
+                    <label class="btn btn-outline-primary" for="5 Min">5 Min</label>
+
+                    <input type="checkbox" class="btn-check" name="duration" id="30 Min" value="30 Min">
+                    <label class="btn btn-outline-primary" for="30 Min">30 Min</label>
+
+                    <input type="checkbox" class="btn-check" name="duration" id="1 Hour" value="1 Hour">
+                    <label class="btn btn-outline-primary" for="1 Hour">1 Hour</label>
+
+                    <input type="checkbox" class="btn-check" name="duration" id="1 Day" value="1 Day">
+                    <label class="btn btn-outline-primary" for="1 Day">1 Day</label>
+
+                    <input type="checkbox" class="btn-check" name="duration" id="More then 2 Days"
+                        value="More then 2 Days">
+                    <label class="btn btn-outline-primary" for="More then 2 Days">More then 2 Days</label>
+
+                </div>
+
+                <br><br>
+
                 <button type="button" onclick="analyzeSymptoms()">Analyze</button>
             </form>
         </div>
+
         <div id="result"></div>
         <!-- <input type="checkbox" name="symptom" value="bleeding"> Bleeding <br>
                 <input type="checkbox" name="symptom" value="swelling"> Swelling <br>
@@ -832,42 +861,51 @@
     <script src="static/main.js"></script>
 
 
-    <script>
+    <<script>
 
         function analyzeSymptoms() {
 
-            let symptoms = []
-            let bodyParts = []
+        let symptoms = []
+        let bodyParts = []
+        let duration1 = []
 
-            document.querySelectorAll('input[name="symptom"]:checked')
-                .forEach(el => symptoms.push(el.value))
+        document.querySelectorAll('input[name="symptom"]:checked')
+        .forEach(el => symptoms.push(el.value))
 
-            document.querySelectorAll('input[name="body_part"]:checked')
-                .forEach(el => bodyParts.push(el.value))
+        document.querySelectorAll('input[name="body_part"]:checked')
+        .forEach(el => bodyParts.push(el.value))
 
-            fetch("/analyze_symptom", {   // 🔴 FIXED ROUTE
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    symptoms: symptoms,
-                    body_parts: bodyParts
-                })
-            })
-                .then(res => res.json())
-                .then(data => {
+        document.querySelectorAll('input[name="duration"]:checked')
+        .forEach(el => duration1.push(el.value))
 
-                    document.getElementById("result").innerHTML = `
-                        <h2>${data.injury}</h2>
-                        <p>Risk Level: ${data.risk_level}</p>
-                        `
+        fetch("/analyze_symptom", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+        symptoms: symptoms,
+        body_parts: bodyParts,
+        duration: duration1
+        })
+        })
+        .then(res => res.json())
+        .then(data => {
 
-                })
+        document.getElementById("result").innerHTML = `
+        <h1>${data.injury}</h1>
+        <p><b>Risk Level:</b> ${data.risk_level}</p>
+
+        <ul>
+            ${data.first_aid_steps.map(step => `<li>${step}</li>`).join("")}
+        </ul>
+        `
+
+        })
 
         }
 
-    </script>
+        </script>
 
 </body>
 
