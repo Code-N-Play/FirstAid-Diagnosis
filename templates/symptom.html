@@ -498,6 +498,34 @@
 
                 <br><br>
 
+                <h3>Age Group</h3>
+                <br>
+
+                <div class="inputbox">
+
+                    <input type="checkbox" class="btn-check" name="age" id="Below 5 Years" value="Below 5 Years">
+                    <label class="btn btn-outline-primary" for="Below 5 Years">Below 5 Years</label>
+
+                    <input type="checkbox" class="btn-check" name="age" id="5-10 Years" value="5-10 Years">
+                    <label class="btn btn-outline-primary" for="5-10 Years">5-10 Years</label>
+
+                    <input type="checkbox" class="btn-check" name="age" id="10-17 Years" value="10-17 Years">
+                    <label class="btn btn-outline-primary" for="10-17 Years">10-17 Years</label>
+
+                    <input type="checkbox" class="btn-check" name="age" id="18-30 Years" value="18-30 Years">
+                    <label class="btn btn-outline-primary" for="18-30 Years">18-30 Years</label>
+
+                    <input type="checkbox" class="btn-check" name="age" id="31-50 Years" value="31-50 Years">
+                    <label class="btn btn-outline-primary" for="31-50 Years">31-50 Years</label>
+
+                    <input type="checkbox" class="btn-check" name="age" id="More then 50"
+                        value="More then 50">
+                    <label class="btn btn-outline-primary" for="More then 50">More then 50</label>
+
+                </div>
+
+                <br><br>
+
                 <button type="button" onclick="analyzeSymptoms()">Analyze</button>
             </form>
         </div>
@@ -861,13 +889,14 @@
     <script src="static/main.js"></script>
 
 
-    <<script>
+    <script>
 
         function analyzeSymptoms() {
 
         let symptoms = []
         let bodyParts = []
         let duration1 = []
+        let age = []
 
         document.querySelectorAll('input[name="symptom"]:checked')
         .forEach(el => symptoms.push(el.value))
@@ -878,6 +907,9 @@
         document.querySelectorAll('input[name="duration"]:checked')
         .forEach(el => duration1.push(el.value))
 
+        document.querySelectorAll('input[name="age"]:checked')
+        .forEach(el => age.push(el.value))
+
         fetch("/analyze_symptom", {
         method: "POST",
         headers: {
@@ -886,7 +918,9 @@
         body: JSON.stringify({
         symptoms: symptoms,
         body_parts: bodyParts,
-        duration: duration1
+        duration: duration1,
+        age: age
+        
         })
         })
         .then(res => res.json())

@@ -107,10 +107,12 @@ def analyze_symptom():
         symptoms = data.get("symptoms", [])
         body_parts = data.get("body_parts", [])
         duration = data.get("duration", [])
+        age = data.get("age", [])
 
         print("Symptoms:", symptoms)
         print("Body Parts:", body_parts)
         print("Duration:", duration)
+        print("Age:", age)
 
         if not symptoms and not body_parts:
             return jsonify({
@@ -129,6 +131,8 @@ def analyze_symptom():
             User symptoms: {symptoms}
 
             injury duration: {duration}
+
+            injured persons age: {age}
 
             Identify the possible injury and give first aid advice.
 
