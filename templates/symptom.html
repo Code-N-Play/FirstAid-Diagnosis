@@ -518,8 +518,7 @@
                     <input type="checkbox" class="btn-check" name="age" id="31-50 Years" value="31-50 Years">
                     <label class="btn btn-outline-primary" for="31-50 Years">31-50 Years</label>
 
-                    <input type="checkbox" class="btn-check" name="age" id="More then 50"
-                        value="More then 50">
+                    <input type="checkbox" class="btn-check" name="age" id="More then 50" value="More then 50">
                     <label class="btn btn-outline-primary" for="More then 50">More then 50</label>
 
                 </div>
@@ -528,6 +527,11 @@
 
                 <button type="button" onclick="analyzeSymptoms()">Analyze</button>
             </form>
+        </div>
+
+        <div id="loader" style="display:none;text-align:center;">
+            <div class="spinner-border text-primary"></div>
+            <p>Analyzing symptoms...</p>
         </div>
 
         <div id="result"></div>
@@ -893,53 +897,69 @@
 
         function analyzeSymptoms() {
 
-        let symptoms = []
-        let bodyParts = []
-        let duration1 = []
-        let age = []
+            let symptoms = []
+            let bodyParts = []
+            let duration1 = []
+            let age = []
 
-        document.querySelectorAll('input[name="symptom"]:checked')
-        .forEach(el => symptoms.push(el.value))
+            document.querySelectorAll('input[name="symptom"]:checked')
+                .forEach(el => symptoms.push(el.value))
 
-        document.querySelectorAll('input[name="body_part"]:checked')
-        .forEach(el => bodyParts.push(el.value))
+            document.querySelectorAll('input[name="body_part"]:checked')
+                .forEach(el => bodyParts.push(el.value))
 
-        document.querySelectorAll('input[name="duration"]:checked')
-        .forEach(el => duration1.push(el.value))
+            document.querySelectorAll('input[name="duration"]:checked')
+                .forEach(el => duration1.push(el.value))
 
-        document.querySelectorAll('input[name="age"]:checked')
-        .forEach(el => age.push(el.value))
+            document.querySelectorAll('input[name="age"]:checked')
+                .forEach(el => age.push(el.value))
 
-        fetch("/analyze_symptom", {
-        method: "POST",
-        headers: {
-        "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-        symptoms: symptoms,
-        body_parts: bodyParts,
-        duration: duration1,
-        age: age
-        
-        })
-        })
-        .then(res => res.json())
-        .then(data => {
+            // SHOW LOADER
+            document.getElementById("loader").style.display = "block"
+            document.getElementById("result").innerHTML = ""
 
-        document.getElementById("result").innerHTML = `
-        <h1>${data.injury}</h1>
-        <p><b>Risk Level:</b> ${data.risk_level}</p>
+            setTimeout(() => {
 
-        <ul>
-            ${data.first_aid_steps.map(step => `<li>${step}</li>`).join("")}
-        </ul>
-        `
+                fetch("/analyze_symptom", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        symptoms: symptoms,
+                        body_parts: bodyParts,
+                        duration: duration1,
+                        age: age
+                    })
+                })
+                    .then(res => res.json())
+                    .then(data => {
 
-        })
+                        // HIDE LOADER
+                        document.getElementById("loader").style.display = "none"
+
+                        document.getElementById("result").innerHTML = `
+<h1>${data.injury}</h1>
+<p><b>Risk Level:</b> ${data.risk_level}</p>
+
+<ul>
+${data.first_aid_steps.map(step => `<li>${step}</li>`).join("")}
+</ul>
+`
+
+                    })
+                    .catch(err => {
+
+                        document.getElementById("loader").style.display = "none"
+                        document.getElementById("result").innerHTML = "<p>Error analyzing symptoms</p>"
+
+                    })
+
+            }, 100)
 
         }
 
-        </script>
+    </script>
 
 </body>
 
