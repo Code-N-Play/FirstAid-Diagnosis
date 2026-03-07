@@ -192,6 +192,78 @@ def analyze_symptom():
             "see_doctor_when": []
         })
 
+@app.route('/analyze_care', methods=['POST'])
+def analyze_care():
+
+    try:
+
+        image = request.files.get("image")
+
+        symptoms = json.loads(request.form.get("symptoms", "[]"))
+        body_parts = json.loads(request.form.get("body_parts", "[]"))
+        duration = json.loads(request.form.get("duration", "[]"))
+        age = json.loads(request.form.get("age", "[]"))
+
+        prompt = f"""
+You are a medical first aid assistant.
+
+Body part injured: {body_parts}
+Symptoms: {symptoms}
+Duration: {duration}
+Age group: {age}
+
+Identify the possible injury and give first aid advice.
+
+Return ONLY valid JSON in this format:
+
+{{
+"injury": "",
+"risk_level": "",
+"first_aid_steps": [],
+"see_doctor_when": []
+}}
+
+Risk level must be one of:
+HOME_CARE
+MONITOR
+DOCTOR_VISIT
+EMERGENCY
+"""
+
+        # AI call
+        if image:
+            img = Image.open(image)
+            response = model.generate_content([prompt, img])
+        else:
+            response = model.generate_content(prompt)
+
+        raw_text = response.text
+
+        # Debug print
+        print("AI RAW RESPONSE:", raw_text)
+
+        # Clean markdown formatting
+        cleaned = raw_text.replace("```json", "").replace("```", "").strip()
+
+        # Extract JSON safely
+        start = cleaned.find("{")
+        end = cleaned.rfind("}") + 1
+        json_text = cleaned[start:end]
+
+        result = json.loads(json_text)
+
+        return jsonify(result)
+
+    except Exception as e:
+
+        print("ERROR:", e)
+
+        return jsonify({
+            "injury": "Unable to analyze",
+            "risk_level": "MONITOR",
+            "first_aid_steps": ["Try again"],
+            "see_doctor_when": []
+        })
 
 # =========================
 # Run App

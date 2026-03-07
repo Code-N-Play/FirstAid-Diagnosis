@@ -97,20 +97,24 @@
             object-fit: contain;
             max-height: 250px;
         }
-        .mainhead{
+
+        .mainhead {
             font-weight: 700;
             text-align: center;
         }
-        .pera{
+
+        .pera {
             text-align: center;
         }
-        .twobtn{
+
+        .twobtn {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 20%;
         }
-        .btn1{
+
+        .btn1 {
             height: 50px;
             width: 200px;
             background-color: rgb(164, 255, 255);
@@ -119,7 +123,8 @@
             border-radius: 25px;
             border-color: rgb(2, 193, 193);
         }
-        .btn2{
+
+        .btn2 {
             height: 50px;
             width: 200px;
             background-color: rgb(149, 247, 178);
@@ -127,6 +132,25 @@
             font-weight: 700;
             border-radius: 25px;
             border-color: rgb(57, 196, 7);
+        }
+
+        .inputbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .one {
+            height: 50px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .head1 {
+            font-weight: 700;
         }
     </style>
 </head>
@@ -148,7 +172,7 @@
 
                 <nav id="navmenu" class="navmenu">
                     <ul>
-                        <li><a href="/" >Diagnosis by Image</a></li>
+                        <li><a href="/">Diagnosis by Image</a></li>
                         <li><a href="/symptom">Diagnosis by Syptoms</a></li>
                         <li><a href="/care" class="active">Care with Privacy</a></li>
                         <li><a href="contact.html">About</a></li>
@@ -193,7 +217,10 @@
                             </h1>
 
                             <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
-                                Our application helps users quickly understand minor injuries and provides basic first aid steps using AI image analysis. It is designed to offer quick guidance in emergencies and also allows users to privately check sensitive health issues they may hesitate to discuss with others.
+                                Our application helps users quickly understand minor injuries and provides basic first
+                                aid steps using AI image analysis. It is designed to offer quick guidance in emergencies
+                                and also allows users to privately check sensitive health issues they may hesitate to
+                                discuss with others.
                             </p>
 
                             <div class="hero-stats mb-4" data-aos="fade-right" data-aos-delay="500">
@@ -280,32 +307,163 @@
             <br><br><br>
             <h1 class="mainhead">Start Diagnosis</h1>
             <br>
-            <p class="pera" >Get quick first aid guidance and private health help instantly</p>
+            <p class="pera">Get quick first aid guidance and private health help instantly</p>
             <br><br>
 
             <div class="inputbox">
-                <label for="injuryImageInput" id="previewLabel" class="dropbox">Upload the Image</label><br>
+                <label for="injuryImageInput" id="previewLabel" class="dropbox">
+                    Upload the Image
+                </label><br>
 
                 <input type="file" class="inputfiled" id="injuryImageInput" accept="image/*"
                     onchange="previewImage(event)">
-
-
-            </div><br>
-            <div class="inputboxprivew">
-                <img id="" width="250px" height="200px" style="display:none; border:1px solid #ccc;">
-
             </div>
-            <button class="analyzebtn" onclick="analyzeImage()">Analyze Injury</button><br>
-            <div id="result"></div>
 
-            <br><br>
-            
+            <br>
+
+            <div class="inputboxprivew">
+                <img id="imagePreview" width="250" height="200" style="display:none; border:1px solid #ccc;">
+            </div>
+            <form method="POST" action="/symptom">
+
+                <h3 class="head1">Injured Place</h3>
+                <br>
+
+                <div class="inputbox d-flex flex-wrap">
+
+                    <input type="checkbox" class="btn-check" name="body_part" id="head" value="Head">
+                    <label class="one btn btn-outline-primary" for="head">Head</label>
+
+                    <input type="checkbox" class="btn-check" name="body_part" id="eye" value="Eye">
+                    <label class="one btn btn-outline-primary" for="eye">Eye</label>
+
+                    <input type="checkbox" class="btn-check" name="body_part" id="skin" value="Skin">
+                    <label class="one btn btn-outline-primary" for="skin">Skin</label>
+
+                    <input type="checkbox" class="btn-check" name="body_part" id="chest" value="Chest">
+                    <label class="one btn btn-outline-primary" for="chest">Chest</label>
+
+                    <input type="checkbox" class="btn-check" name="body_part" id="stomach" value="Stomach">
+                    <label class="one btn btn-outline-primary" for="stomach">Stomach</label>
+
+                    <input type="checkbox" class="btn-check" name="body_part" id="hand" value="Hand">
+                    <label class="one btn btn-outline-primary" for="hand">Hand</label>
+
+                    <input type="checkbox" class="btn-check" name="body_part" id="leg" value="Leg">
+                    <label class="one btn btn-outline-primary" for="leg">Leg</label>
+
+                </div>
+
+                <br><br>
+
+                <h3 class="head1">Symptoms</h3>
+                <br>
+
+                <div class="inputbox d-flex flex-wrap">
+
+                    <input type="checkbox" class="btn-check" name="symptom" id="pain" value="Pain">
+                    <label class="one btn btn-outline-primary" for="pain">Pain</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom" id="swelling" value="Swelling">
+                    <label class="one btn btn-outline-primary" for="swelling">Swelling</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom" id="redness" value="Redness">
+                    <label class="one btn btn-outline-primary" for="redness">Redness</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom" id="burning" value="Burning sensation">
+                    <label class="one btn btn-outline-primary" for="burning">Burning sensation</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom" id="itching" value="Itching">
+                    <label class="one btn btn-outline-primary" for="itching">Itching</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom" id="bleeding" value="Bleeding">
+                    <label class="one btn btn-outline-primary" for="bleeding">Bleeding</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom" id="fever" value="Fever">
+                    <label class="one btn btn-outline-primary" for="fever">Fever</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom" id="nausea" value="Nausea">
+                    <label class="one btn btn-outline-primary" for="nausea">Nausea</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom" id="dizziness" value="Dizziness">
+                    <label class="one btn btn-outline-primary" for="dizziness">Dizziness</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom" id="rash" value="Rash">
+                    <label class="one btn btn-outline-primary" for="rash">Rash</label>
+
+                </div>
+
+                <br><br>
+
+                <h3 class="head1">Injury Duration</h3>
+                <br>
+
+                <div class="inputbox d-flex flex-wrap">
+
+                    <input type="checkbox" class="btn-check" name="duration" id="Just Now" value="Just Now">
+                    <label class="one btn btn-outline-primary" for="Just Now">Just Now</label>
+
+                    <input type="checkbox" class="btn-check" name="duration" id="5 Min" value="5 Min">
+                    <label class="one btn btn-outline-primary" for="5 Min">5 Min</label>
+
+                    <input type="checkbox" class="btn-check" name="duration" id="30 Min" value="30 Min">
+                    <label class="one btn btn-outline-primary" for="30 Min">30 Min</label>
+
+                    <input type="checkbox" class="btn-check" name="duration" id="1 Hour" value="1 Hour">
+                    <label class="one btn btn-outline-primary" for="1 Hour">1 Hour</label>
+
+                    <input type="checkbox" class="btn-check" name="duration" id="1 Day" value="1 Day">
+                    <label class="one btn btn-outline-primary" for="1 Day">1 Day</label>
+
+                    <input type="checkbox" class="btn-check" name="duration" id="More then 2 Days"
+                        value="More then 2 Days">
+                    <label class="one btn btn-outline-primary" for="More then 2 Days">More then 2 Days</label>
+
+                </div>
+
+                <br><br>
+
+                <h3 class="head1">Age Group</h3>
+                <br>
+
+                <div class="inputbox d-flex flex-wrap">
+
+                    <input type="checkbox" class="btn-check" name="age" id="Below 5 Years" value="Below 5 Years">
+                    <label class="one btn btn-outline-primary" for="Below 5 Years">Below 5 Years</label>
+
+                    <input type="checkbox" class="btn-check" name="age" id="5-10 Years" value="5-10 Years">
+                    <label class="one btn btn-outline-primary" for="5-10 Years">5-10 Years</label>
+
+                    <input type="checkbox" class="btn-check" name="age" id="10-17 Years" value="10-17 Years">
+                    <label class="one btn btn-outline-primary" for="10-17 Years">10-17 Years</label>
+
+                    <input type="checkbox" class="btn-check" name="age" id="18-30 Years" value="18-30 Years">
+                    <label class="one btn btn-outline-primary" for="18-30 Years">18-30 Years</label>
+
+                    <input type="checkbox" class="btn-check" name="age" id="31-50 Years" value="31-50 Years">
+                    <label class="one btn btn-outline-primary" for="31-50 Years">31-50 Years</label>
+
+                    <input type="checkbox" class="btn-check" name="age" id="More then 50" value="More then 50">
+                    <label class="one btn btn-outline-primary" for="More then 50">More then 50</label>
+
+                </div>
+
+                <br><br>
+                <button type="button" class="analyzebtn" onclick="analyzeAll()">Analyze Diagnosis</button>
+            </form>
+        </div>
+
+
+        <div id="result"></div>
+
+        <br><br>
+
 
         </div>
 
 
 
-        
+
 
         <!-- Featured Departments Section -->
         <section id="featured-departments" class="featured-departments section">
@@ -337,16 +495,16 @@
         </section><!-- /Featured Departments Section -->
         <div class="container">
 
-        <h2 style="font-weight: 700;">More Features for Diagnosis</h2>
-        <br><br>
-        <div class="twobtn">
-            <button type="button" class="btn1" onclick="location.href='/'">Diagnosis by Image</button>
-            <button type="button" class="btn2" onclick="location.href='/symptom'">Diagnosis by Symptoms</button>
-        </div>
+            <h2 style="font-weight: 700;">More Features for Diagnosis</h2>
+            <br><br>
+            <div class="twobtn">
+                <button type="button" class="btn1" onclick="location.href='/'">Diagnosis by Image</button>
+                <button type="button" class="btn2" onclick="location.href='/symptom'">Diagnosis by Symptoms</button>
+            </div>
 
-       </div> 
-       <br>
-        
+        </div>
+        <br>
+
 
         <!-- Call To Action Section -->
         <section id="call-to-action" class="call-to-action section light-background">
@@ -364,7 +522,8 @@
                                     <i class="bi bi-shield-check"></i>
                                 </div>
                                 <h3>Advanced Technology</h3>
-                                <p>Advanced AI technology analyzes injury images and symptoms to provide quick insights and basic first aid guidance in real time.</p>
+                                <p>Advanced AI technology analyzes injury images and symptoms to provide quick insights
+                                    and basic first aid guidance in real time.</p>
                             </div>
                         </div>
 
@@ -374,7 +533,8 @@
                                     <i class="bi bi-clock"></i>
                                 </div>
                                 <h3>24/7 Availability</h3>
-                                <p>Our system is available 24×7 to provide instant injury analysis, first aid guidance, and health support whenever users need it.</p>
+                                <p>Our system is available 24×7 to provide instant injury analysis, first aid guidance,
+                                    and health support whenever users need it.</p>
                             </div>
                         </div>
 
@@ -384,7 +544,8 @@
                                     <i class="bi bi-people"></i>
                                 </div>
                                 <h3>Expert Team</h3>
-                                <p>Our AI system is trained to provide reliable injury analysis and first aid recommendations, helping users make quick and informed health decisions.</p>
+                                <p>Our AI system is trained to provide reliable injury analysis and first aid
+                                    recommendations, helping users make quick and informed health decisions.</p>
                             </div>
                         </div>
 
@@ -521,180 +682,118 @@
 
     <script>
         function previewImage(event) {
-            const label = document.getElementById('previewLabel');
-            const image = document.createElement("img");
-            image.classList.add("preview-image");
-            const file = event.target.files[0];
-            const prevHtml = label.innerHTML;
 
-            label.innerHTML = '';
-            if (file) {
-                image.src = URL.createObjectURL(file);
-                label.appendChild(image);
-                console.log("file not found")
-            } else {
-                label.innerHTML = "Upload the Image";
-                console.log("file not found")
+            const file = event.target.files[0]
+            const preview = document.getElementById("imagePreview")
+
+            if (!file) return
+
+            const reader = new FileReader()
+
+            reader.onload = function (e) {
+                preview.src = e.target.result
+                preview.style.display = "block"
             }
 
-        }
-        // async function analyzeImage() {
-
-        //     const fileInput = document.querySelector("input[type=file]");
-        //     const file = fileInput.files[0];
-
-        //     const formData = new FormData();
-        //     formData.append("image", file);
-
-        //     const resultArea = document.getElementById("result");
-
-        //     resultArea.innerHTML = `
-        //                 <div class="text-center">
-        //         <div class="spinner-border" role="status">
-        //             <span class="visually-hidden">Loading...</span>
-        //         </div>
-        //     </div>`;
-
-        //     try {
-        //         const response = await fetch("/analyze", {
-        //             method: "POST",
-        //             body: formData
-        //         });
-
-        //         if (!response.ok) {
-        //             throw new Error("Server error: " + response.status);
-        //         }
-
-        //         const data = await response.json();
-        //         resultArea.innerText = data.result;
-
-        //     } catch (error) {
-        //         resultArea.innerHTML = `
-        //         <div class="alert alert-danger" role="alert">
-        //             Error : ${error.message}
-        //         </div>`;
-        //     }
-
-        // }
-        async function analyzeImage() {
-
-    const fileInput = document.querySelector("input[type=file]");
-    const file = fileInput.files[0];
-
-    if (!file) {
-        alert("Please upload an image first.");
-        return;
-    }
-
-    const formData = new FormData();
-    formData.append("image", file);
-
-    const resultArea = document.getElementById("result");
-
-    // Loader
-    resultArea.innerHTML = `
-        <div class="text-center p-4">
-            <div class="spinner-border text-primary"></div>
-            <p class="mt-2">Analyzing injury...</p>
-        </div>
-    `;
-
-    try {
-
-        const response = await fetch("/analyze", {
-            method: "POST",
-            body: formData
-        });
-
-        if (!response.ok) {
-            throw new Error("Server error: " + response.status);
+            reader.readAsDataURL(file)
         }
 
-        const data = await response.json();
+        async function analyzeAll() {
 
-        console.log(data); // debug
+            const fileInput = document.querySelector("input[type=file]");
+            const file = fileInput.files[0];
 
-        // Risk mapping
-        let riskSymbol = "⚪";
-        let riskText = "Unknown";
+            let symptoms = []
+            let bodyParts = []
+            let duration = []
+            let age = []
 
-        if (data.risk_level === "HOME_CARE") {
-            riskSymbol = "🟢";
-            riskText = "Home Care";
-        }
-        else if (data.risk_level === "MONITOR") {
-            riskSymbol = "🟡";
-            riskText = "Monitor";
-        }
-        else if (data.risk_level === "DOCTOR_VISIT") {
-            riskSymbol = "🟠";
-            riskText = "Doctor Visit";
-        }
-        else if (data.risk_level === "EMERGENCY") {
-            riskSymbol = "🔴";
-            riskText = "Emergency";
-        }
+            document.querySelectorAll('input[name="symptom"]:checked')
+                .forEach(el => symptoms.push(el.value))
 
-        const firstAid = data.first_aid_steps || [];
-        const doctor = data.see_doctor_when || [];
+            document.querySelectorAll('input[name="body_part"]:checked')
+                .forEach(el => bodyParts.push(el.value))
 
-        resultArea.innerHTML = `
-        <div class="row g-3 mt-2">
+            document.querySelectorAll('input[name="duration"]:checked')
+                .forEach(el => duration.push(el.value))
 
-            <div class="col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h5>🩹 Possible Injury</h5>
-                        <p>${data.injury || "Not detected"}</p>
-                    </div>
+            document.querySelectorAll('input[name="age"]:checked')
+                .forEach(el => age.push(el.value))
+
+            const formData = new FormData()
+
+            if (file) {
+                formData.append("image", file)
+            }
+
+            formData.append("symptoms", JSON.stringify(symptoms))
+            formData.append("body_parts", JSON.stringify(bodyParts))
+            formData.append("duration", JSON.stringify(duration))
+            formData.append("age", JSON.stringify(age))
+
+            const resultArea = document.getElementById("result")
+
+            resultArea.innerHTML = `
+    <div class="text-center p-4">
+        <div class="spinner-border text-primary"></div>
+        <p class="mt-2">AI analyzing injury and symptoms...</p>
+    </div>`
+
+            try {
+
+                const response = await fetch("/analyze_care", {
+                    method: "POST",
+                    body: formData
+                })
+
+                const data = await response.json()
+
+                let riskSymbol = "⚪"
+
+                if (data.risk_level === "HOME_CARE") riskSymbol = "🟢"
+                if (data.risk_level === "MONITOR") riskSymbol = "🟡"
+                if (data.risk_level === "DOCTOR_VISIT") riskSymbol = "🟠"
+                if (data.risk_level === "EMERGENCY") riskSymbol = "🔴"
+
+                resultArea.innerHTML = `
+
+                <div class="container">
+                <div class="card">
+                    <h3>🩹 Possible Injury</h3>
+                    <p>${data.injury}</p>
                 </div>
-            </div>
 
-            <div class="col-md-6">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h5>⚠️ Risk Level</h5>
-                        <p style="font-weight:bold;font-size:18px;">
-                            ${riskSymbol} ${riskText}
-                        </p>
-                    </div>
+                <div class="card">
+                    <h3>⚠️ Risk Level</h3>
+                    <p>${riskSymbol} ${data.risk_level}</p>
                 </div>
-            </div>
 
-            <div class="col-12">
-                <div class="card shadow-sm">
-                    <div class="card-body">
-                        <h5>First Aid Steps</h5>
-                        <ul>
-                            ${firstAid.map(step => `<li>${step}</li>`).join("") || "<li>No steps provided</li>"}
-                        </ul>
-                    </div>
+                <div class="card">
+                    <h3>First Aid</h3>
+                <ul>
+                    ${data.first_aid_steps.map(s => `<li>${s}</li>`).join("")}
+                </ul>
                 </div>
-            </div>
 
-            <div class="col-12">
-                <div class="card shadow-sm border-danger">
-                    <div class="card-body">
-                        <h5 class="text-danger">When to See a Doctor</h5>
-                        <ul>
-                            ${doctor.map(step => `<li>${step}</li>`).join("") || "<li>No warning provided</li>"}
-                        </ul>
-                    </div>
+                <div class="card">
+                    <h3>See Doctor When</h3>
+                <ul>
+                    ${data.see_doctor_when.map(s => `<li>${s}</li>`).join("")}
+                </ul>
                 </div>
-            </div>
+                </div >
+                    `    
+                
 
-        </div>
-        `;
+            } catch (error) {
 
-    } catch (error) {
-
-        resultArea.innerHTML = `
+                resultArea.innerHTML = `
         <div class="alert alert-danger">
-            Error: ${error.message}
-        </div>
-        `;
-    }
-}
+        Error analyzing diagnosis
+        </div>`
+            }
+
+        } 
     </script>
 
 </body>
