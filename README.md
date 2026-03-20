@@ -25,9 +25,10 @@ Our Solution provides:
 
 <div style="display: flex;flex-direction: column; grid-gap: 10px;">
      <div style="display: flex; grid-gap: 10px;">
-        <img src="image-1.jpeg" alt="screenshots" width="49%" style="border: 2px solid lightgreen"/>
-        <img src="image-2.jpeg" alt="screenshots" width="49%" style="border: 2px solid lightgreen"/>
-        <img src="image-2.jpeg" alt="screenshots" width="49%" style="border: 2px solid lightgreen"/>
+        <img src="Screenshot 2026-03-20 225044" alt="screenshots" width="49%" style="border: 2px solid lightgreen"/>
+        <img src="Screenshot 2026-03-20 225415" alt="screenshots" width="49%" style="border: 2px solid lightgreen"/>
+        <img src="Screenshot 2026-03-20 225439" alt="screenshots" width="49%" style="border: 2px solid lightgreen"/>
+        <img src="Screenshot 2026-03-20 225934" alt="screenshots" width="49%" style="border: 2px solid lightgreen"/>
     </div>
 </div>
   
