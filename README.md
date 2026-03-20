@@ -20,3 +20,20 @@ Our Solution provides:
       Select symptoms and receive instant guidance.
 - Care with Privacy:<br>
       Analyze sensitive health issues without sharing personal information.
+
+### Images
+
+<div style="display: flex;flex-direction: column; grid-gap: 10px;">
+     <div style="display: flex; grid-gap: 10px;">
+        <img src="image-1.jpeg" alt="screenshots" width="49%" style="border: 2px solid lightgreen"/>
+        <img src="image-2.jpeg" alt="screenshots" width="49%" style="border: 2px solid lightgreen"/>
+        <img src="image-2.jpeg" alt="screenshots" width="49%" style="border: 2px solid lightgreen"/>
+    </div>
+</div>
+  
+---
+
+## Tech Stack:
+- Frontend: HTML, CSS, JavaScript, Bootstrap
+- Backend: Python(Flask)
+- AI Model: Gemini API
