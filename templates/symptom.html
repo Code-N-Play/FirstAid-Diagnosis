@@ -30,20 +30,12 @@
     <!-- Main CSS File -->
     <link href="static/main.css" rel="stylesheet">
 
-    <!-- =======================================================
-  * Template Name: Clinic
-  * Template URL: https://bootstrapmade.com/clinic-bootstrap-template/
-  * Updated: Jul 23 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-    <style>
-        
 
+    <style>
         .inputbox {
             justify-content: center;
         }
-    
+
         .mainhead {
             font-weight: 700;
             text-align: center;
@@ -67,14 +59,15 @@
             justify-content: center;
             gap: 20px;
         }
-        .one{
+
+        .one {
             height: 50px;
             width: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-      
+
         .analyzebtn {
             height: 50px;
             width: 200px;
@@ -85,37 +78,44 @@
             font-weight: 700;
             margin-left: 40%;
         }
-        .headbox{
+
+        .headbox {
             height: auto;
             width: 100%;
             border-radius: 10px;
-            border:1px solid green;
+            border: 1px solid green;
         }
-        .heading{
+
+        .heading {
             margin-top: 10px;
-            text-align: center; 
+            text-align: center;
             font-weight: 700;
         }
-        .perabox{
+
+        .perabox {
             height: auto;
             width: 100%;
             border-radius: 10px;
-            border:1px solid orange;
+            border: 1px solid orange;
         }
-        .paragraph{
+
+        .paragraph {
             margin-top: 10px;
             text-align: center;
             font-weight: 400;
         }
-        .discription{
+
+        .discription {
             height: auto;
             width: 100%;
             border-radius: 10px;
-            border:1px solid red;
+            border: 1px solid red;
         }
-        .ull{
+
+        .ull {
             margin-top: 10px;
         }
+
         .analyzebtn {
             height: 50px;
             width: 200px;
@@ -126,16 +126,19 @@
             font-weight: 700;
             margin-left: 40%;
         }
-        .head1{
+
+        .head1 {
             font-weight: 700;
         }
-        .twobtn{
+
+        .twobtn {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 20%;
         }
-        .btn1{
+
+        .btn1 {
             height: 50px;
             width: 200px;
             background-color: rgb(164, 255, 255);
@@ -144,7 +147,8 @@
             border-radius: 25px;
             border-color: rgb(2, 193, 193);
         }
-        .btn2{
+
+        .btn2 {
             height: 50px;
             width: 200px;
             background-color: rgb(247, 149, 201);
@@ -152,6 +156,14 @@
             font-weight: 700;
             border-radius: 25px;
             border-color: rgb(196, 7, 108);
+        }
+        .symptom_card{
+            width: 100%;
+            height: auto;
+            padding: 15px;
+            border: 2px solid rgb(44, 171, 255);
+            border-radius: 10px;
+            background-color: rgb(238, 255, 250);
         }
     </style>
 </head>
@@ -168,7 +180,7 @@
                 <a href="/" class="logo d-flex align-items-center">
                     <!-- Uncomment the line below if you also wish to use an image logo -->
                     <!-- <img src="static/assets/img/logo.webp" alt=""> -->
-                    <h1 class="sitename">FADc</h1>
+                    <h1 class="sitename">Medishield</h1>
                 </a>
 
                 <nav id="navmenu" class="navmenu">
@@ -176,7 +188,7 @@
                         <li><a href="/">Diagnosis by Image</a></li>
                         <li><a href="/symptoms" class="active">Diagnosis by Syptoms</a></li>
                         <li><a href="/care">Care with Privacy</a></li>
-                        <li><a href="contact.html">About</a></li>
+                        <li><a href="/about_us">About</a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
@@ -214,21 +226,21 @@
                             </div>
 
                             <h1 data-aos="fade-right" data-aos-delay="300">
-                                Excellence in <span class="highlight">Healthcare</span> With Privacy
+                                Check your <span class="highlight">Symptoms</span> & get instent first aid
                             </h1>
 
                             <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
-                                Our application helps users quickly understand minor injuries and provides basic first
-                                aid steps using AI image analysis. It is designed to offer quick guidance in emergencies
-                                and also allows users to privately check sensitive health issues they may hesitate to
-                                discuss with others.
+                                Select the symptoms you are experiencing and get quick AI-based guidance. This feature
+                                helps you understand possible issues and provides basic first aid suggestions in a
+                                simple and easy way. No personal information is required, so you can use it freely and
+                                safely.
                             </p>
 
                             <div class="hero-stats mb-4" data-aos="fade-right" data-aos-delay="500">
                                 <div class="stat-item">
-                                    <h3><span data-purecounter-start="0" data-purecounter-end="15"
+                                    <h3><span data-purecounter-start="0" data-purecounter-end="2"
                                             data-purecounter-duration="2" class="purecounter"></span>+</h3>
-                                    <p>Years Experience</p>
+                                    <p>Years of Service</p>
                                 </div>
                                 <div class="stat-item">
                                     <h3><span data-purecounter-start="0" data-purecounter-end="5000"
@@ -243,8 +255,8 @@
                             </div>
 
                             <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
-                                <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
-                                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-outline glightbox">
+                                <a href="/offline" class="btn btn-primary">Offline Mode </a>
+                                <a href="https://www.youtube.com/watch?v=_2sk8WvwsbA" class="btn btn-outline glightbox">
                                     <i class="bi bi-play-circle me-2"></i>
                                     How to USE
                                 </a>
@@ -417,37 +429,41 @@
 
             <form method="POST" action="/symptom">
 
-                <h3 class="head1">Injured Place</h3>
-                <br>
+                <div class="symptom_card">
 
-                <div class="inputbox d-flex flex-wrap">
+                    <h3 class="head1">Injured Place</h3>
+                    <br>
 
-                    <input type="checkbox" class="btn-check" name="body_part" id="head" value="Head">
-                    <label class="one btn btn-outline-primary" for="head">Head</label>
+                    <div class="inputbox d-flex flex-wrap">
 
-                    <input type="checkbox" class="btn-check" name="body_part" id="eye" value="Eye">
-                    <label class="one btn btn-outline-primary" for="eye">Eye</label>
 
-                    <input type="checkbox" class="btn-check" name="body_part" id="skin" value="Skin">
-                    <label class="one btn btn-outline-primary" for="skin">Skin</label>
+                        <input type="checkbox" class="btn-check" name="body_part" id="head" value="Head">
+                        <label class="one btn btn-outline-primary" for="head">Head</label>
 
-                    <input type="checkbox" class="btn-check" name="body_part" id="chest" value="Chest">
-                    <label class="one btn btn-outline-primary" for="chest">Chest</label>
+                        <input type="checkbox" class="btn-check" name="body_part" id="eye" value="Eye">
+                        <label class="one btn btn-outline-primary" for="eye">Eye</label>
 
-                    <input type="checkbox" class="btn-check" name="body_part" id="stomach" value="Stomach">
-                    <label class="one btn btn-outline-primary" for="stomach">Stomach</label>
+                        <input type="checkbox" class="btn-check" name="body_part" id="skin" value="Skin">
+                        <label class="one btn btn-outline-primary" for="skin">Skin</label>
 
-                    <input type="checkbox" class="btn-check" name="body_part" id="hand" value="Hand">
-                    <label class="one btn btn-outline-primary" for="hand">Hand</label>
+                        <input type="checkbox" class="btn-check" name="body_part" id="chest" value="Chest">
+                        <label class="one btn btn-outline-primary" for="chest">Chest</label>
 
-                    <input type="checkbox" class="btn-check" name="body_part" id="leg" value="Leg">
-                    <label class="one btn btn-outline-primary" for="leg">Leg</label>
+                        <input type="checkbox" class="btn-check" name="body_part" id="stomach" value="Stomach">
+                        <label class="one btn btn-outline-primary" for="stomach">Stomach</label>
+
+                        <input type="checkbox" class="btn-check" name="body_part" id="hand" value="Hand">
+                        <label class="one btn btn-outline-primary" for="hand">Hand</label>
+
+                        <input type="checkbox" class="btn-check" name="body_part" id="leg" value="Leg">
+                        <label class="one btn btn-outline-primary" for="leg">Leg</label>
+
+                    </div>
 
                 </div>
-
                 <br><br>
 
-                <h3 class="head1" >Symptoms</h3>
+                <h3 class="head1">Symptoms</h3>
                 <br>
 
                 <div class="inputbox d-flex flex-wrap">
@@ -486,7 +502,7 @@
 
                 <br><br>
 
-                <h3 class="head1" >Injury Duration</h3>
+                <h3 class="head1">Injury Duration</h3>
                 <br>
 
                 <div class="inputbox d-flex flex-wrap">
@@ -551,16 +567,7 @@
         </div>
 
         <div id="result"></div>
-        <!-- <input type="checkbox" name="symptom" value="bleeding"> Bleeding <br>
-                <input type="checkbox" name="symptom" value="swelling"> Swelling <br>
-                <input type="checkbox" name="symptom" value="pain"> Pain <br>
-                <input type="checkbox" name="symptom" value="burn"> Burn <br>
-
-                <br>
-                <button type="submit">Analyze</button> -->
-
-
-
+        
 
         <!-- Featured Departments Section -->
         <section id="featured-departments" class="featured-departments section">
@@ -592,17 +599,17 @@
 
         </section><!-- /Featured Departments Section -->
 
-       <div class="container">
+        <div class="container">
 
-        <h2 style="font-weight: 700;">More Features for Diagnosis</h2>
-        <br><br>
-        <div class="twobtn">
-            <button type="button" class="btn1" onclick="location.href='/'">Diagnosis by image</button>
-            <button type="button" class="btn2" onclick="location.href='/care'">Care with Privacy</button>
+            <h2 style="font-weight: 700;">More Features for Diagnosis</h2>
+            <br><br>
+            <div class="twobtn">
+                <button type="button" class="btn1" onclick="location.href='/'">Diagnosis by image</button>
+                <button type="button" class="btn2" onclick="location.href='/care'">Care with Privacy</button>
+            </div>
+
         </div>
-
-       </div> 
-       <br>
+        <br>
     </main>
 
     <footer id="footer" class="footer-16 footer position-relative">
@@ -615,7 +622,7 @@
                     <div class="col-lg-5">
                         <div class="brand-section">
                             <a href="index.html" class="logo d-flex align-items-center mb-4">
-                                <span class="sitename">FADc</span>
+                                <span class="sitename">Medishield</span>
                             </a>
                             <p class="brand-description">Crafting exceptional digital experiences through thoughtful
                                 design and
@@ -649,7 +656,7 @@
                                             <a href="/">Diagnosis by Image</a>
                                             <a href="/symptom">Diagnosis by Syptoms</a>
                                             <a href="/care">Care with Privacy</a>
-                                            <a href="#!">About</a>
+                                            <a href="/about_us">About</a>
                                         </nav>
                                     </div>
                                 </div>
@@ -660,9 +667,8 @@
                                         <nav class="footer-nav">
                                             <a href="/privacy">Privacy Policy</a>
                                             <a href="#!">Terms of Services</a>
-                                            <a href="#!">Cookie Policy</a>
-                                            <a href="#!">GitHub</a>
-                                            <a href="#!">YouTube</a>
+                                            <a href="https://github.com/Code-N-Play">GitHub</a>
+                                            <a href="https://www.youtube.com/@CodePlay-y8h5x">YouTube</a>
                                         </nav>
                                     </div>
                                 </div>

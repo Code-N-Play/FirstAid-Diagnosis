@@ -30,13 +30,7 @@
     <!-- Main CSS File -->
     <link href="static/main.css" rel="stylesheet">
 
-    <!-- =======================================================
-  * Template Name: Clinic
-  * Template URL: https://bootstrapmade.com/clinic-bootstrap-template/
-  * Updated: Jul 23 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+   
     <style>
         .inputfiled {
             display: none;
@@ -167,7 +161,7 @@
                 <a href="index.html" class="logo d-flex align-items-center">
                     <!-- Uncomment the line below if you also wish to use an image logo -->
                     <!-- <img src="static/assets/img/logo.webp" alt=""> -->
-                    <h1 class="sitename">FADc</h1>
+                    <h1 class="sitename">Medishield</h1>
                 </a>
 
                 <nav id="navmenu" class="navmenu">
@@ -175,7 +169,7 @@
                         <li><a href="/">Diagnosis by Image</a></li>
                         <li><a href="/symptom">Diagnosis by Syptoms</a></li>
                         <li><a href="/care" class="active">Care with Privacy</a></li>
-                        <li><a href="contact.html">About</a></li>
+                        <li><a href="/about_us">About</a></li>
                     </ul>
                     <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
                 </nav>
@@ -213,17 +207,18 @@
                             </div>
 
                             <h1 data-aos="fade-right" data-aos-delay="300">
-                                Excellence in <span class="highlight">Healthcare</span> With Privacy
+                                Private Health Chack with <span class="highlight">100%</span> Privacy
                             </h1>
 
                             <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
-                                Our application helps users quickly understand minor injuries and provides basic first
-                                aid steps using AI image analysis. It is designed to offer quick guidance in emergencies
-                                and also allows users to privately check sensitive health issues they may hesitate to
-                                discuss with others.
+                                Check sensitive health issues safely and anonymously using AI. No identity required, no data stored.
+                            </p>
+                            
+                            <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
+                                This feature allows users to analyze private health concerns by uploading an image or selecting symptoms. Our system ensures complete privacy while providing basic first aid guidance and suggestions.
                             </p>
 
-                            <div class="hero-stats mb-4" data-aos="fade-right" data-aos-delay="500">
+                            <!-- <div class="hero-stats mb-4" data-aos="fade-right" data-aos-delay="500">
                                 <div class="stat-item">
                                     <h3><span data-purecounter-start="0" data-purecounter-end="15"
                                             data-purecounter-duration="2" class="purecounter"></span>+</h3>
@@ -239,11 +234,11 @@
                                             data-purecounter-duration="2" class="purecounter"></span>+</h3>
                                     <p>Medical Experts</p>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
-                                <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
-                                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-outline glightbox">
+                                <a href="/offline" class="btn btn-primary">Offline Mode </a>
+                                <a href="https://www.youtube.com/watch?v=_2sk8WvwsbA" class="btn btn-outline glightbox">
                                     <i class="bi bi-play-circle me-2"></i>
                                     How to USE
                                 </a>
@@ -326,70 +321,127 @@
             </div>
             <form method="POST" action="/symptom">
 
-                <h3 class="head1">Injured Place</h3>
+                <h3 class="head1">Gender</h3>
                 <br>
 
                 <div class="inputbox d-flex flex-wrap">
 
-                    <input type="checkbox" class="btn-check" name="body_part" id="head" value="Head">
-                    <label class="one btn btn-outline-primary" for="head">Head</label>
+                    <input type="checkbox" class="btn-check" name="Gender" id="Male" value="Male">
+                    <label class="one btn btn-outline-primary" for="Male">Male</label>
 
-                    <input type="checkbox" class="btn-check" name="body_part" id="eye" value="Eye">
-                    <label class="one btn btn-outline-primary" for="eye">Eye</label>
+                    <input type="checkbox" class="btn-check" name="Gender" id="Female" value="Female">
+                    <label class="one btn btn-outline-primary" for="Female">Female</label>
 
-                    <input type="checkbox" class="btn-check" name="body_part" id="skin" value="Skin">
-                    <label class="one btn btn-outline-primary" for="skin">Skin</label>
+                    <input type="checkbox" class="btn-check" name="Gender" id="Not to say" value="Not to say">
+                    <label class="one btn btn-outline-primary" for="Not to say">Not to say</label>
 
-                    <input type="checkbox" class="btn-check" name="body_part" id="chest" value="Chest">
-                    <label class="one btn btn-outline-primary" for="chest">Chest</label>
-
-                    <input type="checkbox" class="btn-check" name="body_part" id="stomach" value="Stomach">
-                    <label class="one btn btn-outline-primary" for="stomach">Stomach</label>
-
-                    <input type="checkbox" class="btn-check" name="body_part" id="hand" value="Hand">
-                    <label class="one btn btn-outline-primary" for="hand">Hand</label>
-
-                    <input type="checkbox" class="btn-check" name="body_part" id="leg" value="Leg">
-                    <label class="one btn btn-outline-primary" for="leg">Leg</label>
+                    
 
                 </div>
 
                 <br><br>
 
-                <h3 class="head1">Symptoms</h3>
+                <h3 class="head1">Body Area</h3>
                 <br>
 
                 <div class="inputbox d-flex flex-wrap">
 
-                    <input type="checkbox" class="btn-check" name="symptom" id="pain" value="Pain">
-                    <label class="one btn btn-outline-primary" for="pain">Pain</label>
+                    <input type="checkbox" class="btn-check" name="body_area" id="private_area_skin" value="private_area_skin">
+                    <label class="one btn btn-outline-primary" for="private_area_skin">Skin (Private Area)</label>
 
-                    <input type="checkbox" class="btn-check" name="symptom" id="swelling" value="Swelling">
-                    <label class="one btn btn-outline-primary" for="swelling">Swelling</label>
+                    <input type="checkbox" class="btn-check" name="body_area" id="Urinary_area" value="Urinary_area">
+                    <label class="one btn btn-outline-primary" for="Urinary_area">Urinary area</label>
 
-                    <input type="checkbox" class="btn-check" name="symptom" id="redness" value="Redness">
+                    <input type="checkbox" class="btn-check" name="body_area" id="reporductive_area" value="reporductive_area">
+                    <label class="one btn btn-outline-primary" for="reporductive_area">Reproductive area</label>
+
+                    <input type="checkbox" class="btn-check" name="body_area" id="inner_thighs" value="inner_thighs">
+                    <label class="one btn btn-outline-primary" for="inner_thighs">Inner thighs</label>
+
+                    
+
+                </div>
+
+                <br><br>
+
+                
+                <h3 class="head1" >Common Symptoms</h3>
+                <br>
+
+                <div class="inputbox d-flex flex-wrap">
+
+                    <input type="checkbox" class="btn-check" name="common_symptom" id="Itching" value="Itching">
+                    <label class="one btn btn-outline-primary" for="Itching">Itching</label>
+
+                    <input type="checkbox" class="btn-check" name="common_symptom" id="Burning sensation" value="Burning sensation">
+                    <label class="one btn btn-outline-primary" for="Burning sensation">Burning sensation</label>
+
+                    <input type="checkbox" class="btn-check" name="common_symptom" id="redness" value="Redness">
                     <label class="one btn btn-outline-primary" for="redness">Redness</label>
 
-                    <input type="checkbox" class="btn-check" name="symptom" id="burning" value="Burning sensation">
-                    <label class="one btn btn-outline-primary" for="burning">Burning sensation</label>
+                    <input type="checkbox" class="btn-check" name="common_symptom" id="Swelling" value="Swelling">
+                    <label class="one btn btn-outline-primary" for="Swelling">Swelling</label>
 
-                    <input type="checkbox" class="btn-check" name="symptom" id="itching" value="Itching">
-                    <label class="one btn btn-outline-primary" for="itching">Itching</label>
+                    <input type="checkbox" class="btn-check" name="common_symptom" id="Pain" value="Pain">
+                    <label class="one btn btn-outline-primary" for="Pain">Pain</label>
 
-                    <input type="checkbox" class="btn-check" name="symptom" id="bleeding" value="Bleeding">
-                    <label class="one btn btn-outline-primary" for="bleeding">Bleeding</label>
+                    <input type="checkbox" class="btn-check" name="common_symptom" id="Rash / Spots" value="Rash / Spots">
+                    <label class="one btn btn-outline-primary" for="Rash / Spots">Rash / Spots</label>
 
-                    <input type="checkbox" class="btn-check" name="symptom" id="fever" value="Fever">
-                    <label class="one btn btn-outline-primary" for="fever">Fever</label>
+                    <input type="checkbox" class="btn-check" name="common_symptom" id="Unusual Smell" value="Unusual Smell">
+                    <label class="one btn btn-outline-primary" for="Unusual Smell">Unusual Smell</label>
 
-                    <input type="checkbox" class="btn-check" name="symptom" id="nausea" value="Nausea">
-                    <label class="one btn btn-outline-primary" for="nausea">Nausea</label>
+                    <input type="checkbox" class="btn-check" name="common_symptom" id="Irritation" value="Irritation">
+                    <label class="one btn btn-outline-primary" for="Irritation">Irritation</label>
 
-                    <input type="checkbox" class="btn-check" name="symptom" id="dizziness" value="Dizziness">
-                    <label class="one btn btn-outline-primary" for="dizziness">Dizziness</label>
+                   
 
-                    <input type="checkbox" class="btn-check" name="symptom" id="rash" value="Rash">
-                    <label class="one btn btn-outline-primary" for="rash">Rash</label>
+                </div>
+
+                <br><br>
+
+                <h3 class="head1">Symptomps for MEN</h3>
+                <br>
+
+                <div class="inputbox d-flex flex-wrap">
+
+                    <input type="checkbox" class="btn-check" name="symptom_for_men" id="pain_during_urination" value="pain_during_urination">
+                    <label class="one btn btn-outline-primary" for="pain_during_urination">Pain during urination</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom_for_men" id="discharge" value="discharge">
+                    <label class="one btn btn-outline-primary" for="discharge">Discharge</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom_for_men" id="redness_in_genital_area" value="redness_in_genital_area">
+                    <label class="one btn btn-outline-primary" for="redness_in_genital_area">Redness in genital area</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom_for_men" id="Itching_in_private_area" value="Itching_in_private_area">
+                    <label class="one btn btn-outline-primary" for="Itching_in_private_area">Itching in private area</label>
+
+                    
+
+                </div>
+
+                <br><br>
+
+                <h3 class="head1">Symptomps for WOMEN</h3>
+                <br>
+
+                <div class="inputbox d-flex flex-wrap">
+
+                    <input type="checkbox" class="btn-check" name="symptom_for_women" id="unusual_discharge" value="unusual_discharge">
+                    <label class="one btn btn-outline-primary" for="unusual_discharge">Unusual Discharge</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom_for_women" id="itching_or_irritation" value="itching_or_irritation">
+                    <label class="one btn btn-outline-primary" for="itching_or_irritation">Itching or Irritation</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom_for_women" id="burning_sensation" value="burning_sensation">
+                    <label class="one btn btn-outline-primary" for="burning_sensation">Burning sensation</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom_for_women" id="lower_abdominal_pain" value="lower_abdominal_pain">
+                    <label class="one btn btn-outline-primary" for="lower_abdominal_pain">Lower abdominal pain</label>
+
+                    <input type="checkbox" class="btn-check" name="symptom_for_women" id="irregular_discomfort" value="irregular_discomfort">
+                    <label class="one btn btn-outline-primary" for="irregular_discomfort">Irregular Discomfort</label>
 
                 </div>
 
@@ -569,7 +621,7 @@
                             <div class="contact-actions" data-aos="fade-up" data-aos-delay="300">
                                 <a href="tel:5551234567" class="emergency-call">
                                     <i class="bi bi-telephone"></i>
-                                    <span>(555) 123-4567</span>
+                                    <span>9876543210</span>
                                 </a>
                                 <a href="contact.html" class="contact-link">Find Location</a>
                             </div>
@@ -594,7 +646,7 @@
                     <div class="col-lg-5">
                         <div class="brand-section">
                             <a href="index.html" class="logo d-flex align-items-center mb-4">
-                                <span class="sitename">FADc</span>
+                                <span class="sitename">Medishield</span>
                             </a>
                             <p class="brand-description">Crafting exceptional digital experiences through thoughtful
                                 design and
@@ -628,7 +680,7 @@
                                             <a href="/">Diagnosis by Image</a>
                                             <a href="/symptom">Diagnosis by Syptoms</a>
                                             <a href="/care">Care with Privacy</a>
-                                            <a href="#!">About</a>
+                                            <a href="/about_us">About</a>
                                         </nav>
                                     </div>
                                 </div>
@@ -639,9 +691,8 @@
                                         <nav class="footer-nav">
                                             <a href="/privacy">Privacy Policy</a>
                                             <a href="#!">Terms of Services</a>
-                                            <a href="#!">Cookie Policy</a>
-                                            <a href="#!">GitHub</a>
-                                            <a href="#!">YouTube</a>
+                                            <a href="https://github.com/Code-N-Play">GitHub</a>
+                                            <a href="https://www.youtube.com/@CodePlay-y8h5x">YouTube</a>
                                         </nav>
                                     </div>
                                 </div>
@@ -703,16 +754,28 @@
             const fileInput = document.querySelector("input[type=file]");
             const file = fileInput.files[0];
 
-            let symptoms = []
-            let bodyParts = []
+            let gender = []
+            let body_area = []
+            let common_symptoms = []
+            let symptom_for_men = []
+            let symptom_for_women = []
             let duration = []
             let age = []
 
-            document.querySelectorAll('input[name="symptom"]:checked')
-                .forEach(el => symptoms.push(el.value))
+            document.querySelectorAll('input[name="gender"]:checked')
+                .forEach(el => gender.push(el.value))
 
-            document.querySelectorAll('input[name="body_part"]:checked')
-                .forEach(el => bodyParts.push(el.value))
+            document.querySelectorAll('input[name="body_area"]:checked')
+                .forEach(el => body_area.push(el.value))
+
+            document.querySelectorAll('input[name="common_symptoms"]:checked')
+                .forEach(el => common_symptoms.push(el.value))
+
+            document.querySelectorAll('input[name="symptom_for_men"]:checked')
+                .forEach(el => symptom_for_men.push(el.value))
+
+            document.querySelectorAll('input[name="symptom_for_women"]:checked')
+                .forEach(el => symptom_for_women.push(el.value))
 
             document.querySelectorAll('input[name="duration"]:checked')
                 .forEach(el => duration.push(el.value))
@@ -726,8 +789,11 @@
                 formData.append("image", file)
             }
 
-            formData.append("symptoms", JSON.stringify(symptoms))
-            formData.append("body_parts", JSON.stringify(bodyParts))
+            formData.append("gender", JSON.stringify(gender))
+            formData.append("body_area", JSON.stringify(body_area))
+            formData.append("common_symptoms", JSON.stringify(common_symptoms))
+            formData.append("symptom_for_men", JSON.stringify(symptom_for_men))
+            formData.append("symptom_for_women", JSON.stringify(symptom_for_women))
             formData.append("duration", JSON.stringify(duration))
             formData.append("age", JSON.stringify(age))
 

@@ -37,6 +37,13 @@ def care():
 def symptom():
     return render_template('symptom.html')
 
+@app.route('/about_us')
+def about_us():
+    return render_template('about_us.html')
+
+@app.route('/offline')
+def offline():
+    return render_template('offline.html')
 
 @app.route('/analyze', methods=['POST'])
 def analyze():
@@ -199,20 +206,26 @@ def analyze_care():
 
         image = request.files.get("image")
 
-        symptoms = json.loads(request.form.get("symptoms", "[]"))
-        body_parts = json.loads(request.form.get("body_parts", "[]"))
+        gender = json.loads(request.form.get("gender", "[]"))
+        body_area = json.loads(request.form.get("body_area", "[]"))
+        common_symptoms = json.loads(request.form.get("common_symptoms", "[]"))
+        symptom_for_men = json.loads(request.form.get("symptom_for_men", "[]"))
+        symptom_for_women = json.loads(request.form.get("symptom_for_women", "[]"))
         duration = json.loads(request.form.get("duration", "[]"))
         age = json.loads(request.form.get("age", "[]"))
 
         prompt = f"""
 You are a medical first aid assistant.
 
-Body part injured: {body_parts}
-Symptoms: {symptoms}
+Gender: {gender}
+body_area: {body_area}
+common_symptoms: {common_symptoms}
+symptomp_for_men: {symptom_for_men}
+symptomp_for_women: {symptom_for_women}
 Duration: {duration}
 Age group: {age}
 
-Identify the possible injury and give first aid advice.
+Identify the possible injury and give first aid advice. in symple words
 
 Return ONLY valid JSON in this format:
 

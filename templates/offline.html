@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Offline mode</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fb;
+            color: #1a2b4c;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background: white;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #1a2b4c;
+            font-weight: 500;
+        }
+
+        .nav-links a.active {
+            color: #2b6cff;
+            border-bottom: 2px solid #2b6cff;
+        }
+
+        /* Container */
+        .container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        /* Upload Box */
+        .upload-box {
+            border: 2px dashed #ccc;
+            border-radius: 15px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            width: 60%;
+            background: #fff;
+            cursor: pointer;
+        }
+
+        /* Button */
+        .btn {
+            background: #2ecc71;
+            border: none;
+            padding: 12px 25px;
+            color: white;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+
+        }
+
+        /* Section Box */
+        .box {
+            background: #e9f2f3;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 80%;
+            border: 1px solid #cde;
+        }
+
+        .box h2 {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        /* Buttons Grid */
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .tag {
+            padding: 10px 20px;
+            border: 2px solid #2b6cff;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Medishield</div>
+        <div class="nav-links">
+            <a href="#" class="active">Diagnosis by Image</a>
+            <a href="#">Diagnosis by Symptoms</a>
+            <a href="#">Care with Privacy</a>
+            <a href="#">About</a>
+        </div>
+    </div>
+
+    
+
+    <!-- Main Section -->
+    <div class="container">
+        <h1>Start Diagnosis</h1>
+        <p>Get quick first aid guidance and private health help instantly</p>
+
+
+
+
+    </div>
+
+    <!-- Symptoms Section -->
+
+    <div class="box">
+        <h3 class="head1">Injured Place</h3>
+        <br>
+
+        <div class="inputbox d-flex flex-wrap" style="margin-left: 200px;"><br>
+
+
+            <input type="checkbox" class="btn-check" name="body_part" id="head" value="Head">
+            <label class="one btn btn-outline-primary" for="head">Head</label>
+
+            <input type="checkbox" class="btn-check" name="body_part" id="eye" value="Eye">
+            <label class="one btn btn-outline-primary" for="eye">Eye</label>
+
+            <input type="checkbox" class="btn-check" name="body_part" id="skin" value="Skin">
+            <label class="one btn btn-outline-primary" for="skin">Skin</label>
+
+            <input type="checkbox" class="btn-check" name="body_part" id="chest" value="Chest">
+            <label class="one btn btn-outline-primary" for="chest">Chest</label>
+
+            <input type="checkbox" class="btn-check" name="body_part" id="stomach" value="Stomach">
+            <label class="one btn btn-outline-primary" for="stomach">Stomach</label>
+
+            <input type="checkbox" class="btn-check" name="body_part" id="hand" value="Hand">
+            <label class="one btn btn-outline-primary" for="hand">Hand</label>
+
+            <input type="checkbox" class="btn-check" name="body_part" id="leg" value="Leg">
+            <label class="one btn btn-outline-primary" for="leg">Leg</label>
+
+        </div>
+    </div>
+    <div class="box">
+        <h3 class="head1">Symptoms</h3>
+        <br>
+
+        <div class="inputbox d-flex flex-wrap" style="margin-left: 50PX;"><br>
+
+            <input type="checkbox" class="btn-check" name="symptom" id="pain" value="Pain">
+            <label class="one btn btn-outline-primary" for="pain">Pain</label>
+
+            <input type="checkbox" class="btn-check" name="symptom" id="swelling" value="Swelling">
+            <label class="one btn btn-outline-primary" for="swelling">Swelling</label>
+
+            <input type="checkbox" class="btn-check" name="symptom" id="redness" value="Redness">
+            <label class="one btn btn-outline-primary" for="redness">Redness</label>
+
+            <input type="checkbox" class="btn-check" name="symptom" id="burning" value="Burning sensation">
+            <label class="one btn btn-outline-primary" for="burning">Burning sensation</label>
+
+            <input type="checkbox" class="btn-check" name="symptom" id="itching" value="Itching">
+            <label class="one btn btn-outline-primary" for="itching">Itching</label>
+
+            <input type="checkbox" class="btn-check" name="symptom" id="bleeding" value="Bleeding">
+            <label class="one btn btn-outline-primary" for="bleeding">Bleeding</label>
+
+            <input type="checkbox" class="btn-check" name="symptom" id="fever" value="Fever">
+            <label class="one btn btn-outline-primary" for="fever">Fever</label>
+
+
+
+            <input type="checkbox" class="btn-check" name="symptom" id="rash" value="Rash">
+            <label class="one btn btn-outline-primary" for="rash">Rash</label>
+
+        </div>
+
+        <br><br>
+    </div>
+
+    <div class="box">
+        <h3 class="head1">Injury Duration</h3>
+        <br>
+
+        <div class="inputbox d-flex flex-wrap" style="margin-left: 170PX;"><br>
+
+            <input type="checkbox" class="btn-check" name="duration" id="Just Now" value="Just Now">
+            <label class="one btn btn-outline-primary" for="Just Now">Just Now</label>
+
+            <input type="checkbox" class="btn-check" name="duration" id="5 Min" value="5 Min">
+            <label class="one btn btn-outline-primary" for="5 Min">5 Min</label>
+
+            <input type="checkbox" class="btn-check" name="duration" id="30 Min" value="30 Min">
+            <label class="one btn btn-outline-primary" for="30 Min">30 Min</label>
+
+            <input type="checkbox" class="btn-check" name="duration" id="1 Hour" value="1 Hour">
+            <label class="one btn btn-outline-primary" for="1 Hour">1 Hour</label>
+
+            <input type="checkbox" class="btn-check" name="duration" id="1 Day" value="1 Day">
+            <label class="one btn btn-outline-primary" for="1 Day">1 Day</label>
+
+            <input type="checkbox" class="btn-check" name="duration" id="More then 2 Days" value="More then 2 Days">
+            <label class="one btn btn-outline-primary" for="More then 2 Days">More then 2 Days</label>
+
+        </div>
+
+        <br><br>
+
+    </div>
+    <div class="box">
+        <h3 class="head1">Age Group</h3>
+        <br>
+
+        <div class="inputbox d-flex flex-wrap" style="margin-left: 100PX;"><br>
+
+            <input type="checkbox" class="btn-check" name="age" id="Below 5 Years" value="Below 5 Years">
+            <label class="one btn btn-outline-primary" for="Below 5 Years">Below 5 Years</label>
+
+            <input type="checkbox" class="btn-check" name="age" id="5-10 Years" value="5-10 Years">
+            <label class="one btn btn-outline-primary" for="5-10 Years">5-10 Years</label>
+
+            <input type="checkbox" class="btn-check" name="age" id="10-17 Years" value="10-17 Years">
+            <label class="one btn btn-outline-primary" for="10-17 Years">10-17 Years</label>
+
+            <input type="checkbox" class="btn-check" name="age" id="18-30 Years" value="18-30 Years">
+            <label class="one btn btn-outline-primary" for="18-30 Years">18-30 Years</label>
+
+            <input type="checkbox" class="btn-check" name="age" id="31-50 Years" value="31-50 Years">
+            <label class="one btn btn-outline-primary" for="31-50 Years">31-50 Years</label>
+
+            <input type="checkbox" class="btn-check" name="age" id="More then 50" value="More then 50">
+            <label class="one btn btn-outline-primary" for="More then 50">More then 50</label>
+
+        </div>
+
+        <br><br>
+    </div>
+
+
+    <!-- <div class="box">
+        <h2>Symptoms</h2>
+        <div class="grid">
+            <div class="tag">Pain</div>
+            <div class="tag">Swelling</div>
+            <div class="tag">Redness</div>
+            <div class="tag">Burning</div>
+            <div class="tag">Itching</div>
+            <div class="tag">Bleeding</div>
+            <div class="tag">Fever</div>
+            <div class="tag">Nausea</div>
+            <div class="tag">Dizziness</div>
+            <div class="tag">Rash</div>
+        </div>
+
+    </div> -->
+    <br><br>
+
+    <button class="btn" style="margin-left: 45%;" onclick="offlineAnalyze()">Analyze Injury</button><br><br>
+
+    <!-- Floating Button -->
+
+
+
+    <!-- <label><input type="checkbox" name="symptoms" value="itching"> Itching</label><br>
+    <label><input type="checkbox" name="symptoms" value="redness"> Redness</label><br>
+    <label><input type="checkbox" name="symptoms" value="burning"> Burning</label><br>
+    <label><input type="checkbox" name="symptoms" value="pain"> Pain</label><br>
+    <label><input type="checkbox" name="symptoms" value="swelling"> Swelling</label><br> -->
+
+    <br>
+
+
+    <div id="result"></div>
+
+    <script>
+        //     function offlineAnalyze() {
+
+        //         let symptoms = []
+
+        //         document.querySelectorAll('input[name="symptoms"]:checked')
+        //             .forEach(el => symptoms.push(el.value))
+
+        //         let result = {
+        //             injury: "General irritation",
+        //             risk: "LOW",
+        //             steps: []
+        //         }
+
+        //         if (symptoms.includes("burning") && symptoms.includes("redness")) {
+        //             result.injury = "Skin irritation"
+        //             result.risk = "MODERATE"
+        //             result.steps = [
+        //                 "Wash with clean water",
+        //                 "Avoid scratching",
+        //                 "Keep area dry"
+        //             ]
+        //         }
+
+        //         else if (symptoms.includes("pain") && symptoms.includes("swelling")) {
+        //             result.injury = "Possible sprain"
+        //             result.risk = "MODERATE"
+        //             result.steps = [
+        //                 "Take rest",
+        //                 "Apply ice",
+        //                 "Avoid movement"
+        //             ]
+        //         }
+
+        //         else if (symptoms.includes("itching")) {
+        //             result.injury = "Possible allergy"
+        //             result.risk = "LOW"
+        //             result.steps = [
+        //                 "Keep clean",
+        //                 "Avoid irritants",
+        //                 "Use mild cream"
+        //             ]
+        //         }
+
+        //         else {
+        //             result.steps = [
+        //                 "Keep clean",
+        //                 "Monitor symptoms",
+        //                 "Consult doctor if needed"
+        //             ]
+        //         }
+
+        //         document.getElementById("result").innerHTML = `
+        //     <h3>Possible Issue: ${result.injury}</h3>
+        //     <p>Risk Level: ${result.risk}</p>
+        //     <ul>
+        //         ${result.steps.map(s => `<li>${s}</li>`).join("")}
+        //     </ul>
+        // `
+        //     }
+        // 
+
+
+        function offlineAnalyze() {
+
+            let bodyParts = []
+            let symptoms = []
+            let duration = []
+            let age = []
+
+            // Collect values
+            document.querySelectorAll('input[name="body_part"]:checked')
+                .forEach(el => bodyParts.push(el.value))
+
+            document.querySelectorAll('input[name="symptom"]:checked')
+                .forEach(el => symptoms.push(el.value))
+
+            document.querySelectorAll('input[name="duration"]:checked')
+                .forEach(el => duration.push(el.value))
+
+            document.querySelectorAll('input[name="age"]:checked')
+                .forEach(el => age.push(el.value))
+
+            let result = {
+                injury: "General condition",
+                risk: "LOW",
+                steps: [],
+                doctor: []
+            }
+
+            // 🔥 LOGIC START
+
+            // Bleeding case (HIGH PRIORITY)
+            if (symptoms.includes("Bleeding")) {
+                result.injury = "Open wound / cut"
+                result.risk = "HIGH"
+                result.steps = [
+                    "Apply pressure to stop bleeding",
+                    "Clean with water",
+                    "Use clean bandage"
+                ]
+                result.doctor = ["If bleeding does not stop", "Deep cut"]
+            }
+
+            // Burn case
+            else if (symptoms.includes("Burning sensation") || bodyParts.includes("Skin")) {
+                result.injury = "Possible burn or skin irritation"
+                result.risk = "MODERATE"
+                result.steps = [
+                    "Cool area with water for 10 minutes",
+                    "Do not apply ice directly",
+                    "Cover with clean cloth"
+                ]
+                result.doctor = ["If blisters form", "Severe pain"]
+            }
+
+            // Sprain / swelling
+            else if (symptoms.includes("Pain") && symptoms.includes("Swelling")) {
+                result.injury = "Possible sprain or injury"
+                result.risk = "MODERATE"
+                result.steps = [
+                    "Take rest",
+                    "Apply ice",
+                    "Keep area elevated"
+                ]
+                result.doctor = ["If pain increases", "Unable to move"]
+            }
+
+            // Infection / irritation
+            else if (symptoms.includes("Redness") && symptoms.includes("Itching")) {
+                result.injury = "Skin infection or allergy"
+                result.risk = "LOW"
+                result.steps = [
+                    "Keep area clean",
+                    "Avoid scratching",
+                    "Use mild cream"
+                ]
+                result.doctor = ["If it spreads", "No improvement in 2 days"]
+            }
+
+            // Fever case
+            else if (symptoms.includes("Fever")) {
+                result.injury = "Possible infection"
+                result.risk = "MODERATE"
+                result.steps = [
+                    "Drink fluids",
+                    "Take rest",
+                    "Monitor temperature"
+                ]
+                result.doctor = ["High fever", "More than 2 days"]
+            }
+
+            // Default
+            else {
+                result.steps = [
+                    "Keep area clean",
+                    "Monitor symptoms",
+                    "Avoid irritation"
+                ]
+                result.doctor = ["If symptoms increase"]
+            }
+
+            // ⏱ Duration impact
+            if (duration.includes("More then 2 Days")) {
+                result.risk = "HIGH"
+                result.doctor.push("Problem lasting too long")
+            }
+
+            // 👶 Age safety
+            if (age.includes("Below 5 Years")) {
+                result.doctor.push("Extra care needed for children")
+            }
+
+            // 🎯 Risk emoji
+            let riskSymbol = "🟢"
+            if (result.risk === "MODERATE") riskSymbol = "🟡"
+            if (result.risk === "HIGH") riskSymbol = "🔴"
+
+            // 🧾 OUTPUT
+
+            document.getElementById("result").innerHTML = `
+        <div class="box">
+            <h3> Possible Issue</h3>
+            <br>
+            <p>${result.injury}</p>
+        </div>
+
+        <div class="box">
+            <h3> Risk Level</h3>
+            <br>
+            <p>${riskSymbol} ${result.risk}</p>
+        </div>
+
+        <div class="box">
+            <h3> First Aid Steps</h3>
+            <br>
+            <ul>
+                ${result.steps.map(s => `<li>${s}</li>`).join("")}
+            </ul>
+        </div>
+
+        <div class="box">
+            <h3> See Doctor When</h3>
+            <br>
+            <ul>
+                ${result.doctor.map(s => `<li>${s}</li>`).join("")}
+            </ul>
+        </div>
+    `
+        }
+
+    </script>
+
+</body>
+
+</html>
