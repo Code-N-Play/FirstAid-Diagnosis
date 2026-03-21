@@ -43,15 +43,31 @@ Our Solution provides:
 
 ## How to Run the Project
 
-### clone the Repo
+### Clone the Repo
+```bash
+git clone <Repo-link> cd your-project-folder
+```
 
-### install depenencies 
+### Install Dependencies 
+```bash
+python -m pip install flask google-generativeai pillow-dotenv
+```
+
 
 ### Edit Example.env File
 - Rename the file from **.eve.example ** to **.env**
 - Paste your API key in it
 
- ### Run the App 
+```bash
+GEMINI_API_KEY=__YOUR_API_KEY_HERE__
+```
 
+ ### Run the App 
+```bash
+python main.py
+```
 
  ### Open in browser
+
+ ```bash
+http://127.0.0.1:5000/
