@@ -38,3 +38,20 @@ Our Solution provides:
 - Frontend: HTML, CSS, JavaScript, Bootstrap
 - Backend: Python(Flask)
 - AI Model: Gemini API
+
+---
+
+## How to Run the Project
+
+### clone the Repo
+
+### install depenencies 
+
+### Edit Example.env File
+- Rename the file from **.eve.example ** to **.env**
+- Paste your API key in it
+
+ ### Run the App 
+
+
+ ### Open in browser
