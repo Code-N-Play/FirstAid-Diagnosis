@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>About US</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Favicons -->
+    <link href="static/static/assets/img/favicon.png" rel="icon">
+    <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="static/main.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Clinic
+  * Template URL: https://bootstrapmade.com/clinic-bootstrap-template/
+  * Updated: Jul 23 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+    <style>
+        .inputfiled {
+            display: none;
+
+        }
+
+        .dropbox {
+            width: 600px;
+            height: 300px;
+            border: 2px dashed;
+            border-radius: 25px;
+            border-color: gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .inputbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inputboxprivew {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .analyzebtn {
+            height: 50px;
+            width: 200px;
+            border-radius: 15px;
+            background-color: rgb(63, 198, 4);
+            border-color: green;
+            color: white;
+            font-weight: 700;
+            margin-left: 40%;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #previewLabel {
+            padding: 20px;
+        }
+
+        #previewLabel .preview-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            max-height: 250px;
+        }
+        .mainhead{
+            font-weight: 700;
+            text-align: center;
+        }
+        .pera{
+            text-align: center;
+        }
+        .twobtn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20%;
+        }
+        .btn1{
+            height: 50px;
+            width: 200px;
+            background-color: rgb(164, 255, 255);
+            color: black;
+            font-weight: 700;
+            border-radius: 25px;
+            border-color: rgb(2, 193, 193);
+        }
+        .btn2{
+            height: 50px;
+            width: 200px;
+            background-color: rgb(247, 149, 201);
+            color: black;
+            font-weight: 700;
+            border-radius: 25px;
+            border-color: rgb(196, 7, 108);
+        }
+        .lastln{
+            font-size: 13px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body class="index-page">
+
+    <header id="header" class="header fixed-top">
+
+
+
+        <div class="branding d-flex align-items-cente">
+
+            <div class="container position-relative d-flex align-items-center justify-content-between">
+                <a href="/" class="logo d-flex align-items-center">
+                    <!-- Uncomment the line below if you also wish to use an image logo -->
+                    <!-- <img src="static/assets/img/logo.webp" alt=""> -->
+                    <h1 class="sitename">Medishield</h1>
+                </a>
+
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li><a href="/" >Diagnosis by Image</a></li>
+                        <li><a href="/symptom">Diagnosis by Syptoms</a></li>
+                        <li><a href="/care">Care with Privacy</a></li>
+                        <li><a href="/about_us" class="active">About US</a></li>
+                    </ul>
+                    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                </nav>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main class="main">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <br>
+                            
+
+                            <h1 data-aos="fade-right" data-aos-delay="300">
+                                About <span class="highlight">Us</span> 
+                            </h1>
+
+                            <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
+                                We are a team of passionate developers building Medishield, an AI-powered platform that provides quick first-aid guidance through image and symptom analysis. Our goal is to make healthcare support accessible, fast, and private, especially for sensitive issues users may hesitate to discuss.
+                            </p>
+                            <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
+                                By combining smart technology with privacy-first approach we aim to help people take right first step towards better health anytime, anywhere.
+                            </p>
+
+                            <div class="hero-stats mb-4" data-aos="fade-right" data-aos-delay="500">
+                                <div class="stat-item">
+                                    <h3><span data-purecounter-start="0" data-purecounter-end="2"
+                                            data-purecounter-duration="2" class="purecounter"></span>+</h3>
+                                    <p>Years Experience</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h3><span data-purecounter-start="0" data-purecounter-end="5000"
+                                            data-purecounter-duration="2" class="purecounter"></span>+</h3>
+                                    <p>Patients Treated</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h3><span data-purecounter-start="0" data-purecounter-end="50"
+                                            data-purecounter-duration="2" class="purecounter"></span>+</h3>
+                                    <p>Medical Experts</p>
+                                </div>
+                            </div>
+
+                            <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
+                                <a href="#" class="btn btn-primary">Linkedin</a>
+                                <a href="https://github.com/Code-N-Play" class="btn btn-outline ">
+                                    
+                                    GitHub
+                                </a>
+                                <a href="#" class="btn btn-primary glightbox"> <i class="bi bi-play-circle me-2"></i> Watch Us</a>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
+                            <div class="main-image">
+                                <img src="static/assets/img/bg/aboutus.png" alt="Modern Healthcare Facility"
+                                    class="img-fluid">
+                                <div class="floating-card appointment-card">
+                                    <div class="card-icon">
+                                        <i class="bi bi-shield-check"></i>
+                                    </div>
+                                    <div class="card-content">
+                                        <h6>Safety Check</h6>
+                                        <p>100% Private</p>
+                                        <small></small>
+                                    </div>
+                                </div>
+                                <div class="floating-card rating-card">
+                                    <div class="card-content">
+                                        <div class="rating-stars">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <h6>4.9/5</h6>
+                                        <small>1,234 Reviews</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="background-elements">
+                                <div class="element element-1"></div>
+                                <div class="element element-2"></div>
+                                <div class="element element-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Featured Services Section -->
+        <section id="featured-services" class="featured-services section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+                <h2>Featured Services</h2>
+                <p>AI-powered injury analysis that provides instant first aid guidance, risk detection, and emergency support.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="row g-0">
+     
+
+                </div>
+
+                <div class="specialties-grid" data-aos="fade-up" data-aos-delay="300">
+                    <div class="row align-items-center">
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="specialty-card">
+                                <div class="specialty-image">
+                                    <img src="static/assets/img/health/ai.png" alt="Maternal Care"
+                                        class="img-fluid" loading="lazy">
+                                </div>
+                                <div class="specialty-content">
+                                    <h5>Diagnosis by image</h5>
+                                    <span>Excellence in healthcare with privacy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="specialty-card">
+                                <div class="specialty-image">
+                                    <img src="static/assets/img/health/bosy.png" alt="Vaccination"
+                                        class="img-fluid" loading="lazy">
+                                </div>
+                                <div class="specialty-content">
+                                    <h5>Diagnosis by Symptomps</h5>
+                                    <span>Check your Symptoms & get instent first aid</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="specialty-card">
+                                <div class="specialty-image">
+                                    <img src="static/assets/img/bg/private.png" alt="Emergency Care"
+                                        class="img-fluid" loading="lazy">
+                                </div>
+                                <div class="specialty-content">
+                                    <h5>Care with Privacy</h5>
+                                    <span>Private Health Chack with 100% Privacy</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="specialty-card">
+                                <div class="specialty-image">
+                                    <img src="static/assets/img/health/facilities-6.webp" alt="Advanced Tech"
+                                        class="img-fluid" loading="lazy">
+                                </div>
+                                <div class="specialty-content">
+                                    <h5>Offline Mode</h5>
+                                    <span>We care while No Internet</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section><!-- /Featured Services Section -->
+
+
+
+    </main>
+
+    <footer id="footer" class="footer-16 footer position-relative">
+
+        <div class="container">
+
+            <div class="footer-main" data-aos="fade-up" data-aos-delay="100">
+                <div class="row align-items-start">
+
+                    <div class="col-lg-5">
+                        <div class="brand-section">
+                            <a href="/" class="logo d-flex align-items-center mb-4">
+                                <span class="sitename">Medishield</span>
+                            </a>
+                            <p class="brand-description">Crafting exceptional digital experiences through thoughtful
+                                design and
+                                innovative solutions that elevate your brand presence.</p>
+
+                            <div class="contact-info mt-5">
+                                <div class="contact-item">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <span>Greater Noida, Delhi NCR, INDIA 10012</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="bi bi-telephone"></i>
+                                    <span>+91 9876543210</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="bi bi-envelope"></i>
+                                    <span>hello@first-aid-diagnosis.com</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <div class="footer-nav-wrapper">
+                            <div class="row" style="margin-top:30px ;">
+
+                                <div class="col-6 col-lg-6">
+                                    <div class="nav-column">
+                                        <h6>Pages</h6>
+                                        <nav class="footer-nav">
+                                            <a href="/">Diagnosis by Image</a>
+                                            <a href="/symptom">Diagnosis by Syptoms</a>
+                                            <a href="/care">Care with Privacy</a>
+                                            <a href="/about_us">About</a>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-lg-3">
+                                    <div class="nav-column">
+                                        <h6>Services</h6>
+                                        <nav class="footer-nav">
+                                            <a href="/privacy">Privacy Policy</a>
+                                            <a href="#!">Terms of Services</a>
+                                            <a href="https://github.com/Code-N-Play">GitHub</a>
+                                            <a href="https://www.youtube.com/@CodePlay-y8h5x">YouTube</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <p class="lastln">Copyright <span style="font-weight: 700;">Code-<span style="color: blue;">N</span>-Play</span> All Rights Reserved</p>
+        <p class="lastln" style="margin-top: -15px;">Designed by <span style="font-weight: 700;">Neeraj</span> Distributed by <span style="font-weight: 700;">Code-<span style="color: blue;">N</span>-Play</span></p>
+
+    </footer>
+
+    <!-- Scroll Top -->
+    <a href="#!" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="static/assets/vendor/php-email-form/validate.js"></script>
+    <script src="static/assets/vendor/aos/aos.js"></script>
+    <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="static/main.js"></script>
+
+
+    <script>
+        function previewImage(event) {
+            const label = document.getElementById('previewLabel');
+            const image = document.createElement("img");
+            image.classList.add("preview-image");
+            const file = event.target.files[0];
+            const prevHtml = label.innerHTML;
+
+            label.innerHTML = '';
+            if (file) {
+                image.src = URL.createObjectURL(file);
+                label.appendChild(image);
+                console.log("file not found")
+            } else {
+                label.innerHTML = "Upload the Image";
+                console.log("file not found")
+            }
+
+        }
+        // async function analyzeImage() {
+
+        //     const fileInput = document.querySelector("input[type=file]");
+        //     const file = fileInput.files[0];
+
+        //     const formData = new FormData();
+        //     formData.append("image", file);
+
+        //     const resultArea = document.getElementById("result");
+
+        //     resultArea.innerHTML = `
+        //                 <div class="text-center">
+        //         <div class="spinner-border" role="status">
+        //             <span class="visually-hidden">Loading...</span>
+        //         </div>
+        //     </div>`;
+
+        //     try {
+        //         const response = await fetch("/analyze", {
+        //             method: "POST",
+        //             body: formData
+        //         });
+
+        //         if (!response.ok) {
+        //             throw new Error("Server error: " + response.status);
+        //         }
+
+        //         const data = await response.json();
+        //         resultArea.innerText = data.result;
+
+        //     } catch (error) {
+        //         resultArea.innerHTML = `
+        //         <div class="alert alert-danger" role="alert">
+        //             Error : ${error.message}
+        //         </div>`;
+        //     }
+
+        // }
+        async function analyzeImage() {
+
+    const fileInput = document.querySelector("input[type=file]");
+    const file = fileInput.files[0];
+
+    if (!file) {
+        alert("Please upload an image first.");
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append("image", file);
+
+    const resultArea = document.getElementById("result");
+
+    // Loader
+    resultArea.innerHTML = `
+        <div class="text-center p-4">
+            <div class="spinner-border text-primary"></div>
+            <p class="mt-2">Analyzing injury...</p>
+        </div>
+    `;
+
+    try {
+
+        const response = await fetch("/analyze", {
+            method: "POST",
+            body: formData
+        });
+
+        if (!response.ok) {
+            throw new Error("Server error: " + response.status);
+        }
+
+        const data = await response.json();
+
+        console.log(data); // debug
+
+        // Risk mapping
+        let riskSymbol = "⚪";
+        let riskText = "Unknown";
+
+        if (data.risk_level === "HOME_CARE") {
+            riskSymbol = "🟢";
+            riskText = "Home Care";
+        }
+        else if (data.risk_level === "MONITOR") {
+            riskSymbol = "🟡";
+            riskText = "Monitor";
+        }
+        else if (data.risk_level === "DOCTOR_VISIT") {
+            riskSymbol = "🟠";
+            riskText = "Doctor Visit";
+        }
+        else if (data.risk_level === "EMERGENCY") {
+            riskSymbol = "🔴";
+            riskText = "Emergency";
+        }
+
+        const firstAid = data.first_aid_steps || [];
+        const doctor = data.see_doctor_when || [];
+
+        resultArea.innerHTML = `
+        <div class="row g-3 mt-2">
+
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5>🩹 Possible Injury</h5>
+                        <p>${data.injury || "Not detected"}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5>⚠️ Risk Level</h5>
+                        <p style="font-weight:bold;font-size:18px;">
+                            ${riskSymbol} ${riskText}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5>First Aid Steps</h5>
+                        <ul>
+                            ${firstAid.map(step => `<li>${step}</li>`).join("") || "<li>No steps provided</li>"}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card shadow-sm border-danger">
+                    <div class="card-body">
+                        <h5 class="text-danger">When to See a Doctor</h5>
+                        <ul>
+                            ${doctor.map(step => `<li>${step}</li>`).join("") || "<li>No warning provided</li>"}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        `;
+
+    } catch (error) {
+
+        resultArea.innerHTML = `
+        <div class="alert alert-danger">
+            Error: ${error.message}
+        </div>
+        `;
+    }
+}
+    </script>
+
+</body>
+
+</html>
