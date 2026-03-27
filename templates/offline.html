@@ -74,7 +74,7 @@
         }
 
         /* Button */
-        .btn {
+        .btn1 {
             background: #2ecc71;
             border: none;
             padding: 12px 25px;
@@ -82,6 +82,7 @@
             border-radius: 10px;
             font-size: 16px;
             cursor: pointer;
+
 
         }
 
@@ -91,7 +92,7 @@
             padding: 20px;
             border-radius: 10px;
             margin: 20px auto;
-            width: 80%;
+            width: 90%;
             border: 1px solid #cde;
         }
 
@@ -117,7 +118,35 @@
             transition: 0.2s;
         }
 
-        
+        .btn-check {
+            display: none;
+        }
+
+        .onebtn {
+            height: 40px;
+            width: 150px;
+            background-color: #2ecc71;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .onebtn:active {
+            background-color: red;
+        }
+
+        .inputbox {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
     </style>
 </head>
 
@@ -133,7 +162,7 @@
         </div>
     </div>
 
-    
+
 
     <!-- Main Section -->
     <div class="container">
@@ -151,29 +180,29 @@
         <h3 class="head1">Injured Place</h3>
         <br>
 
-        <div class="inputbox d-flex flex-wrap" style="margin-left: 200px;"><br>
+        <div class="inputbox d-flex flex-wrap">
 
 
             <input type="checkbox" class="btn-check" name="body_part" id="head" value="Head">
-            <label class="one btn btn-outline-primary" for="head">Head</label>
+            <div class="onebtn"><label class="one btn btn-outline-primary" for="head">Head</label></div>
 
             <input type="checkbox" class="btn-check" name="body_part" id="eye" value="Eye">
-            <label class="one btn btn-outline-primary" for="eye">Eye</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="eye">Eye</label></div>
 
             <input type="checkbox" class="btn-check" name="body_part" id="skin" value="Skin">
-            <label class="one btn btn-outline-primary" for="skin">Skin</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="skin">Skin</label></div>
 
             <input type="checkbox" class="btn-check" name="body_part" id="chest" value="Chest">
-            <label class="one btn btn-outline-primary" for="chest">Chest</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="chest">Chest</label></div>
 
             <input type="checkbox" class="btn-check" name="body_part" id="stomach" value="Stomach">
-            <label class="one btn btn-outline-primary" for="stomach">Stomach</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="stomach">Stomach</label></div>
 
             <input type="checkbox" class="btn-check" name="body_part" id="hand" value="Hand">
-            <label class="one btn btn-outline-primary" for="hand">Hand</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="hand">Hand</label></div>
 
             <input type="checkbox" class="btn-check" name="body_part" id="leg" value="Leg">
-            <label class="one btn btn-outline-primary" for="leg">Leg</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="leg">Leg</label></div>
 
         </div>
     </div>
@@ -181,33 +210,35 @@
         <h3 class="head1">Symptoms</h3>
         <br>
 
-        <div class="inputbox d-flex flex-wrap" style="margin-left: 50PX;"><br>
+        <div class="inputbox d-flex flex-wrap">
 
             <input type="checkbox" class="btn-check" name="symptom" id="pain" value="Pain">
-            <label class="one btn btn-outline-primary" for="pain">Pain</label>
+            <div class="onebtn" id="changcolor"> <label class="one btn btn-outline-primary" for="pain">Pain</label>
+            </div>
 
             <input type="checkbox" class="btn-check" name="symptom" id="swelling" value="Swelling">
-            <label class="one btn btn-outline-primary" for="swelling">Swelling</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="swelling">Swelling</label></div>
 
             <input type="checkbox" class="btn-check" name="symptom" id="redness" value="Redness">
-            <label class="one btn btn-outline-primary" for="redness">Redness</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="redness">Redness</label></div>
 
             <input type="checkbox" class="btn-check" name="symptom" id="burning" value="Burning sensation">
-            <label class="one btn btn-outline-primary" for="burning">Burning sensation</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="burning">Burning sensation</label>
+            </div>
 
             <input type="checkbox" class="btn-check" name="symptom" id="itching" value="Itching">
-            <label class="one btn btn-outline-primary" for="itching">Itching</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="itching">Itching</label></div>
 
             <input type="checkbox" class="btn-check" name="symptom" id="bleeding" value="Bleeding">
-            <label class="one btn btn-outline-primary" for="bleeding">Bleeding</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="bleeding">Bleeding</label></div>
 
             <input type="checkbox" class="btn-check" name="symptom" id="fever" value="Fever">
-            <label class="one btn btn-outline-primary" for="fever">Fever</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="fever">Fever</label></div>
 
 
 
             <input type="checkbox" class="btn-check" name="symptom" id="rash" value="Rash">
-            <label class="one btn btn-outline-primary" for="rash">Rash</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="rash">Rash</label></div>
 
         </div>
 
@@ -218,25 +249,26 @@
         <h3 class="head1">Injury Duration</h3>
         <br>
 
-        <div class="inputbox d-flex flex-wrap" style="margin-left: 170PX;"><br>
+        <div class="inputbox d-flex flex-wrap">
 
             <input type="checkbox" class="btn-check" name="duration" id="Just Now" value="Just Now">
-            <label class="one btn btn-outline-primary" for="Just Now">Just Now</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="Just Now">Just Now</label></div>
 
             <input type="checkbox" class="btn-check" name="duration" id="5 Min" value="5 Min">
-            <label class="one btn btn-outline-primary" for="5 Min">5 Min</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="5 Min">5 Min</label></div>
 
             <input type="checkbox" class="btn-check" name="duration" id="30 Min" value="30 Min">
-            <label class="one btn btn-outline-primary" for="30 Min">30 Min</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="30 Min">30 Min</label></div>
 
             <input type="checkbox" class="btn-check" name="duration" id="1 Hour" value="1 Hour">
-            <label class="one btn btn-outline-primary" for="1 Hour">1 Hour</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="1 Hour">1 Hour</label></div>
 
             <input type="checkbox" class="btn-check" name="duration" id="1 Day" value="1 Day">
-            <label class="one btn btn-outline-primary" for="1 Day">1 Day</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="1 Day">1 Day</label></div>
 
             <input type="checkbox" class="btn-check" name="duration" id="More then 2 Days" value="More then 2 Days">
-            <label class="one btn btn-outline-primary" for="More then 2 Days">More then 2 Days</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="More then 2 Days">More then 2
+                    Days</label></div>
 
         </div>
 
@@ -247,25 +279,27 @@
         <h3 class="head1">Age Group</h3>
         <br>
 
-        <div class="inputbox d-flex flex-wrap" style="margin-left: 100PX;"><br>
+        <div class="inputbox d-flex flex-wrap">
 
             <input type="checkbox" class="btn-check" name="age" id="Below 5 Years" value="Below 5 Years">
-            <label class="one btn btn-outline-primary" for="Below 5 Years">Below 5 Years</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="Below 5 Years">Below 5 Years</label>
+            </div>
 
             <input type="checkbox" class="btn-check" name="age" id="5-10 Years" value="5-10 Years">
-            <label class="one btn btn-outline-primary" for="5-10 Years">5-10 Years</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="5-10 Years">5-10 Years</label></div>
 
             <input type="checkbox" class="btn-check" name="age" id="10-17 Years" value="10-17 Years">
-            <label class="one btn btn-outline-primary" for="10-17 Years">10-17 Years</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="10-17 Years">10-17 Years</label></div>
 
             <input type="checkbox" class="btn-check" name="age" id="18-30 Years" value="18-30 Years">
-            <label class="one btn btn-outline-primary" for="18-30 Years">18-30 Years</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="18-30 Years">18-30 Years</label></div>
 
             <input type="checkbox" class="btn-check" name="age" id="31-50 Years" value="31-50 Years">
-            <label class="one btn btn-outline-primary" for="31-50 Years">31-50 Years</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="31-50 Years">31-50 Years</label></div>
 
             <input type="checkbox" class="btn-check" name="age" id="More then 50" value="More then 50">
-            <label class="one btn btn-outline-primary" for="More then 50">More then 50</label>
+            <div class="onebtn"> <label class="one btn btn-outline-primary" for="More then 50">More then 50</label>
+            </div>
 
         </div>
 
@@ -291,7 +325,7 @@
     </div> -->
     <br><br>
 
-    <button class="btn" style="margin-left: 45%;" onclick="offlineAnalyze()">Analyze Injury</button><br><br>
+    <button class="btn1" style="margin-left: 45%;" onclick="offlineAnalyze()">Analyze Injury</button><br><br>
 
     <!-- Floating Button -->
 
@@ -309,6 +343,23 @@
     <div id="result"></div>
 
     <script>
+
+        var changcolor = document.getElementById("changcolor");
+
+        var isRed = false;
+
+        changcolor.addEventListener("click", function () {
+            if (isRed) {
+                changcolor.style.backgroundColor = ""; // default color
+                isRed = false;
+            } else {
+                changcolor.style.backgroundColor = "red";
+                isRed = true;
+            }
+        });
+
+
+
         //     function offlineAnalyze() {
 
         //         let symptoms = []

@@ -128,6 +128,10 @@
             border-radius: 25px;
             border-color: rgb(196, 7, 108);
         }
+        .lastln{
+            font-size: 13px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -173,32 +177,22 @@
                     <div class="col-lg-6">
                         <div class="hero-content">
                             <br>
-                            <div class="trust-badges mb-4" data-aos="fade-right" data-aos-delay="200">
-                                <div class="badge-item">
-                                    <i class="bi bi-shield-check"></i>
-                                    <span>Accredited</span>
-                                </div>
-                                <div class="badge-item">
-                                    <i class="bi bi-clock"></i>
-                                    <span>24/7 Emergency</span>
-                                </div>
-                                <div class="badge-item">
-                                    <i class="bi bi-star-fill"></i>
-                                    <span>4.9/5 Rating</span>
-                                </div>
-                            </div>
+                            
 
                             <h1 data-aos="fade-right" data-aos-delay="300">
-                                Excellence in <span class="highlight">Healthcare</span> With Privacy
+                                About <span class="highlight">Us</span> 
                             </h1>
 
                             <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
-                                Our application helps users quickly understand minor injuries and provides basic first aid steps using AI image analysis. It is designed to offer quick guidance in emergencies and also allows users to privately check sensitive health issues they may hesitate to discuss with others.
+                                We are a team of passionate developers building Medishield, an AI-powered platform that provides quick first-aid guidance through image and symptom analysis. Our goal is to make healthcare support accessible, fast, and private, especially for sensitive issues users may hesitate to discuss.
+                            </p>
+                            <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
+                                By combining smart technology with privacy-first approach we aim to help people take right first step towards better health anytime, anywhere.
                             </p>
 
                             <div class="hero-stats mb-4" data-aos="fade-right" data-aos-delay="500">
                                 <div class="stat-item">
-                                    <h3><span data-purecounter-start="0" data-purecounter-end="15"
+                                    <h3><span data-purecounter-start="0" data-purecounter-end="2"
                                             data-purecounter-duration="2" class="purecounter"></span>+</h3>
                                     <p>Years Experience</p>
                                 </div>
@@ -215,29 +209,22 @@
                             </div>
 
                             <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
-                                <a href="appointment.html" class="btn btn-primary">Book Appointment</a>
-                                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="btn btn-outline glightbox">
-                                    <i class="bi bi-play-circle me-2"></i>
-                                    How to USE
+                                <a href="#" class="btn btn-primary">Linkedin</a>
+                                <a href="https://github.com/Code-N-Play" class="btn btn-outline ">
+                                    
+                                    GitHub
                                 </a>
+                                <a href="#" class="btn btn-primary glightbox"> <i class="bi bi-play-circle me-2"></i> Watch Us</a>
                             </div>
 
-                            <div class="emergency-contact" data-aos="fade-right" data-aos-delay="700">
-                                <div class="emergency-icon">
-                                    <i class="bi bi-telephone-fill"></i>
-                                </div>
-                                <div class="emergency-info">
-                                    <small>Emergency Hotline</small>
-                                    <strong>108</strong>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
 
                     <div class="col-lg-6">
                         <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
                             <div class="main-image">
-                                <img src="static/assets/img/health/ai.png" alt="Modern Healthcare Facility"
+                                <img src="static/assets/img/bg/aboutus.png" alt="Modern Healthcare Facility"
                                     class="img-fluid">
                                 <div class="floating-card appointment-card">
                                     <div class="card-icon">
@@ -274,78 +261,7 @@
 
             </div>
 
-        </section><!-- /Hero Section -->
-
-        <div class="container">
-            <br><br><br>
-            <h1 class="mainhead">Start Diagnosis</h1>
-            <br>
-            <p class="pera" >Get quick first aid guidance and private health help instantly</p>
-            <br><br>
-
-            <div class="inputbox">
-                <label for="injuryImageInput" id="previewLabel" class="dropbox">Upload the Image</label><br>
-
-                <input type="file" class="inputfiled" id="injuryImageInput" accept="image/*"
-                    onchange="previewImage(event)">
-
-
-            </div><br>
-            <div class="inputboxprivew">
-                <img id="" width="250px" height="200px" style="display:none; border:1px solid #ccc;">
-
-            </div>
-            <button class="analyzebtn" onclick="analyzeImage()">Analyze Injury</button><br>
-            <div id="result"></div>
-
-            <br><br>
-            
-
-        </div>
-
-
-
-        
-
-        <!-- Featured Departments Section -->
-        <section id="featured-departments" class="featured-departments section">
-
-            <!-- Section Title -->
-            <div class="container section-title" data-aos="fade-up">
-
-                <div class="emergency-banner" data-aos="fade-up" data-aos-delay="400">
-                    <div class="row align-items-center">
-                        <div class="col-lg-8">
-                            <div class="emergency-content">
-                                <h3>Emergency Services Available 24/7</h3>
-                                <p>Our emergency department is equipped with state-of-the-art technology and staffed by
-                                    board-certified
-                                    emergency physicians ready to provide immediate care.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 text-lg-end">
-                            <a href="tel:+15551234567" class="emergency-btn">
-                                <i class="bi bi-telephone-fill"></i>
-                                Call Emergency: 108
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </section><!-- /Featured Departments Section -->
-        <div class="container">
-
-        <h2 style="font-weight: 700;">More Features for Diagnosis</h2>
-        <br><br>
-        <div class="twobtn">
-            <button type="button" class="btn1" onclick="location.href='/symptom'">Diagnosis by Symptoms</button>
-            <button type="button" class="btn2" onclick="location.href='/care'">Care with Privacy</button>
-        </div>
-
-       </div> 
-       <br>
+        </section>
         <!-- Featured Services Section -->
         <section id="featured-services" class="featured-services section">
 
@@ -358,65 +274,7 @@
             <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                 <div class="row g-0">
-
-                    <div class="col-lg-8" data-aos="fade-right" data-aos-delay="200">
-                        <div class="featured-service-main">
-                            <div class="service-image-wrapper">
-                                <img src="static/assets/img/health/consultation-4.webp"
-                                    alt="Premier Healthcare Services" class="img-fluid" loading="lazy">
-                                <div class="service-overlay">
-                                    <div class="service-badge">
-                                        <i class="bi bi-heart-pulse"></i>
-                                        <span>Emergency Care</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="service-details">
-                                <h2>Comprehensive Healthcare Excellence</h2>
-                                <p>An AI-powered health assistant that detects injuries through images or symptoms, provides instant first aid guidance, and allows users to check sensitive health concerns safely with complete privacy and anonymous support.</p>
-                                <a href="#!" class="main-cta">Explore Our Services</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4" data-aos="fade-left" data-aos-delay="300">
-                        <div class="services-sidebar">
-
-                            <div class="service-item" data-aos="fade-up" data-aos-delay="400">
-                                <div class="service-icon-wrapper">
-                                    <i class="bi bi-card-image"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h4>Injury Detection by Image</h4>
-                                    <p>Upload an image of the injury and our AI will analyze it to identify the possible problem and suggest basic first aid steps.</p>
-                                    <a href="#!" class="service-link">Learn More</a>
-                                </div>
-                            </div>
-
-                            <div class="service-item" data-aos="fade-up" data-aos-delay="500">
-                                <div class="service-icon-wrapper">
-                                    <i class="bi bi-clipboard2-pulse"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h4>Detection by Symptoms</h4>
-                                    <p>Users can enter their symptoms and the system will provide possible health insights along with recommended first aid guidance.</p>
-                                    <a href="#!" class="service-link">Learn More</a>
-                                </div>
-                            </div>
-
-                            <div class="service-item" data-aos="fade-up" data-aos-delay="600">
-                                <div class="service-icon-wrapper">
-                                    <i class="bi bi-shield-fill-check"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h4> Care with Privacy</h4>
-                                    <p>The platform allows users to check sensitive health concerns privately without sharing personal identity or storing personal data.</p>
-                                    <a href="#!" class="service-link">Learn More</a>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+     
 
                 </div>
 
@@ -426,12 +284,12 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="specialty-card">
                                 <div class="specialty-image">
-                                    <img src="static/assets/img/health/maternal-2.webp" alt="Maternal Care"
+                                    <img src="static/assets/img/health/ai.png" alt="Maternal Care"
                                         class="img-fluid" loading="lazy">
                                 </div>
                                 <div class="specialty-content">
-                                    <h5>Maternal Care</h5>
-                                    <span>Expert pregnancy &amp; delivery support</span>
+                                    <h5>Diagnosis by image</h5>
+                                    <span>Excellence in healthcare with privacy</span>
                                 </div>
                             </div>
                         </div>
@@ -439,12 +297,12 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="specialty-card">
                                 <div class="specialty-image">
-                                    <img src="static/assets/img/health/vaccination-3.webp" alt="Vaccination"
+                                    <img src="static/assets/img/health/bosy.png" alt="Vaccination"
                                         class="img-fluid" loading="lazy">
                                 </div>
                                 <div class="specialty-content">
-                                    <h5>Vaccination</h5>
-                                    <span>Complete immunization programs</span>
+                                    <h5>Diagnosis by Symptomps</h5>
+                                    <span>Check your Symptoms & get instent first aid</span>
                                 </div>
                             </div>
                         </div>
@@ -452,12 +310,12 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="specialty-card">
                                 <div class="specialty-image">
-                                    <img src="static/assets/img/health/emergency-1.webp" alt="Emergency Care"
+                                    <img src="static/assets/img/bg/private.png" alt="Emergency Care"
                                         class="img-fluid" loading="lazy">
                                 </div>
                                 <div class="specialty-content">
-                                    <h5>Emergency Care</h5>
-                                    <span>24/7 critical care services</span>
+                                    <h5>Care with Privacy</h5>
+                                    <span>Private Health Chack with 100% Privacy</span>
                                 </div>
                             </div>
                         </div>
@@ -469,8 +327,8 @@
                                         class="img-fluid" loading="lazy">
                                 </div>
                                 <div class="specialty-content">
-                                    <h5>Advanced Technology</h5>
-                                    <span>State-of-the-art medical equipment</span>
+                                    <h5>Offline Mode</h5>
+                                    <span>We care while No Internet</span>
                                 </div>
                             </div>
                         </div>
@@ -482,78 +340,7 @@
 
         </section><!-- /Featured Services Section -->
 
-        <!-- Call To Action Section -->
-        <section id="call-to-action" class="call-to-action section light-background">
 
-            <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-
-                <div class="features-section">
-
-                    <div class="row g-0">
-
-                        <div class="col-lg-4">
-                            <div class="feature-block" data-aos="fade-up" data-aos-delay="200">
-                                <div class="feature-icon">
-                                    <i class="bi bi-shield-check"></i>
-                                </div>
-                                <h3>Advanced Technology</h3>
-                                <p>Advanced AI technology analyzes injury images and symptoms to provide quick insights and basic first aid guidance in real time.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="feature-block" data-aos="fade-up" data-aos-delay="300">
-                                <div class="feature-icon">
-                                    <i class="bi bi-clock"></i>
-                                </div>
-                                <h3>24/7 Availability</h3>
-                                <p>Our system is available 24×7 to provide instant injury analysis, first aid guidance, and health support whenever users need it.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="feature-block" data-aos="fade-up" data-aos-delay="400">
-                                <div class="feature-icon">
-                                    <i class="bi bi-people"></i>
-                                </div>
-                                <h3>Expert Team</h3>
-                                <p>Our AI system is trained to provide reliable injury analysis and first aid recommendations, helping users make quick and informed health decisions.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-block">
-                    <div class="row">
-
-                        <div class="col-lg-8">
-                            <div class="contact-content" data-aos="fade-up" data-aos-delay="200">
-                                <h2>Need Immediate Medical Assistance?</h2>
-                                <p>Our emergency response team is available around the clock to provide immediate
-                                    medical support when
-                                    you need it most.</p>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="contact-actions" data-aos="fade-up" data-aos-delay="300">
-                                <a href="tel:5551234567" class="emergency-call">
-                                    <i class="bi bi-telephone"></i>
-                                    <span>9876543210</span>
-                                </a>
-                                <a href="contact.html" class="contact-link">Find Location</a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-        </section><!-- /Call To Action Section -->
 
     </main>
 
@@ -566,8 +353,8 @@
 
                     <div class="col-lg-5">
                         <div class="brand-section">
-                            <a href="index.html" class="logo d-flex align-items-center mb-4">
-                                <span class="sitename">FADc</span>
+                            <a href="/" class="logo d-flex align-items-center mb-4">
+                                <span class="sitename">Medishield</span>
                             </a>
                             <p class="brand-description">Crafting exceptional digital experiences through thoughtful
                                 design and
@@ -629,7 +416,8 @@
 
         </div>
 
-
+        <p class="lastln">Copyright <span style="font-weight: 700;">Code-<span style="color: blue;">N</span>-Play</span> All Rights Reserved</p>
+        <p class="lastln" style="margin-top: -15px;">Designed by <span style="font-weight: 700;">Neeraj</span> Distributed by <span style="font-weight: 700;">Code-<span style="color: blue;">N</span>-Play</span></p>
 
     </footer>
 

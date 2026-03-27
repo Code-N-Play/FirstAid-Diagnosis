@@ -146,6 +146,22 @@
         .head1 {
             font-weight: 700;
         }
+        .preview-image{
+            filter: blur(20px);
+            
+        }
+        .btn11{
+            color: rgb(255, 0, 76);
+            border-color: rgb(255, 0, 76);
+            border-width: 5px;
+            height: auto;
+            width: auto;
+            border-radius: 25px;
+        }
+        .lastln{
+            font-size: 13px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -192,22 +208,22 @@
                         <div class="hero-content">
                             <br>
                             <div class="trust-badges mb-4" data-aos="fade-right" data-aos-delay="200">
-                                <div class="badge-item">
-                                    <i class="bi bi-shield-check"></i>
-                                    <span>Accredited</span>
+                                <div class="badge-item" style="background-color: rgb(255, 222, 228);">
+                                    <i class="bi bi-shield-check" style="color: rgb(255, 110, 110);"></i>
+                                    <span style="color: rgb(255, 110, 110);">Accredited</span>
                                 </div>
-                                <div class="badge-item">
-                                    <i class="bi bi-clock"></i>
-                                    <span>24/7 Emergency</span>
+                                <div class="badge-item" style="background-color: rgb(255, 222, 228);">
+                                    <i class="bi bi-clock" style="color: rgb(255, 110, 110);"></i>
+                                    <span style="color: rgb(255, 110, 110);">24/7 Emergency</span>
                                 </div>
-                                <div class="badge-item">
-                                    <i class="bi bi-star-fill"></i>
-                                    <span>4.9/5 Rating</span>
+                                <div class="badge-item" style="background-color: rgb(255, 222, 228);">
+                                    <i class="bi bi-star-fill" style="color: rgb(255, 110, 110);"></i>
+                                    <span style="color: rgb(255, 110, 110);">4.9/5 Rating</span>
                                 </div>
                             </div>
 
                             <h1 data-aos="fade-right" data-aos-delay="300">
-                                Private Health Chack with <span class="highlight">100%</span> Privacy
+                                Private Health Chack with <span style="color: rgb(255, 110, 110);">100%</span> Privacy
                             </h1>
 
                             <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
@@ -237,9 +253,9 @@
                             </div> -->
 
                             <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
-                                <a href="/offline" class="btn btn-primary">Offline Mode </a>
-                                <a href="https://www.youtube.com/watch?v=_2sk8WvwsbA" class="btn btn-outline glightbox">
-                                    <i class="bi bi-play-circle me-2"></i>
+                                <a href="/offline" class="btn btn-primary" style="background-color: rgb(255, 0, 76);">Offline Mode </a>
+                                <a href="https://www.youtube.com/watch?v=_2sk8WvwsbA" class="btn btn-outline glightbox" >
+                                    <i class="bi bi-play-circle me-2" ></i>
                                     How to USE
                                 </a>
                             </div>
@@ -259,14 +275,14 @@
                     <div class="col-lg-6">
                         <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
                             <div class="main-image">
-                                <img src="static/assets/img/health/ai.png" alt="Modern Healthcare Facility"
+                                <img src="static/assets/img/bg/private.png" alt="Modern Healthcare Facility"
                                     class="img-fluid">
                                 <div class="floating-card appointment-card">
-                                    <div class="card-icon">
-                                        <i class="bi bi-shield-check"></i>
+                                    <div class="card-icon" style="background-color: rgb(255, 222, 228);">
+                                        <i class="bi bi-shield-check" style="color: rgb(255, 110, 110);"></i>
                                     </div>
                                     <div class="card-content">
-                                        <h6>Safety Check</h6>
+                                        <h6 >Safety Check</h6>
                                         <p>100% Private</p>
                                         <small></small>
                                     </div>
@@ -286,9 +302,9 @@
                                 </div>
                             </div>
                             <div class="background-elements">
-                                <div class="element element-1"></div>
-                                <div class="element element-2"></div>
-                                <div class="element element-3"></div>
+                                <div class="element element-1" style="background-color: rgb(255, 0, 76);"></div>
+                                <div class="element element-2" style="background-color: rgb(255, 0, 76);"></div>
+                                <div class="element element-3" style="background-color: rgb(255, 0, 76);"></div>
                             </div>
                         </div>
                     </div>
@@ -298,7 +314,7 @@
 
         </section><!-- /Hero Section -->
 
-        <div class="container">
+        <div class="container" >
             <br><br><br>
             <h1 class="mainhead">Start Diagnosis</h1>
             <br>
@@ -306,18 +322,22 @@
             <br><br>
 
             <div class="inputbox">
-                <label for="injuryImageInput" id="previewLabel" class="dropbox">
-                    Upload the Image
-                </label><br>
-
-                <input type="file" class="inputfiled" id="injuryImageInput" accept="image/*"
-                    onchange="previewImage(event)">
+                <div class="inputbox">
+                    <label for="injuryImageInput" id="previewLabel" class="dropbox">Upload the Image</label><br>
+    
+                    <input type="file" class="inputfiled" id="injuryImageInput" accept="image/*"
+                        onchange="previewImage(event)">
+    
+    
+                </div><br>
+                
             </div>
 
             <br>
 
             <div class="inputboxprivew">
-                <img id="imagePreview" width="250" height="200" style="display:none; border:1px solid #ccc;">
+                <img id="onetwo23" class="imageprivew12" width="250px" height="200px" style="display:none; border:1px solid #ccc;">
+
             </div>
             <form method="POST" action="/symptom">
 
@@ -708,7 +728,8 @@
 
         </div>
 
-
+        <p class="lastln">Copyright <span style="font-weight: 700;">Code-<span style="color: rgb(255, 110, 110);">N</span>-Play</span> All Rights Reserved</p>
+        <p class="lastln" style="margin-top: -15px;">Designed by <span style="font-weight: 700;">Neeraj</span> Distributed by <span style="font-weight: 700;">Code-<span style="color:  rgb(255, 110, 110);">N</span>-Play</span></p>
 
     </footer>
 
@@ -734,8 +755,21 @@
     <script>
         function previewImage(event) {
 
-            const file = event.target.files[0]
-            const preview = document.getElementById("imagePreview")
+            const label = document.getElementById('previewLabel');
+            const image = document.createElement("img");
+            image.classList.add("preview-image");
+            const file = event.target.files[0];
+            const prevHtml = label.innerHTML;
+
+            label.innerHTML = '';
+            if (file) {
+                image.src = URL.createObjectURL(file);
+                label.appendChild(image);
+                console.log("file not found")
+            } else {
+                label.innerHTML = "Upload the Image";
+                console.log("file not found")
+            }
 
             if (!file) return
 
